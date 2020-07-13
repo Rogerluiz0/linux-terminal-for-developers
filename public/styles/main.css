@@ -10,15 +10,10 @@
   background-color: rgba(17, 17, 22, 0%);
 }
 
-a::selection {
-  color: var(--color-purple);
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
   color: var(--color-gray);
 }
 
@@ -46,32 +41,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
+  text-decoration: none;
   color: var(--color-blue);
-  display: block;
+}
+
+a::selection {
+  color: var(--color-purple);
+}
+
+span {
+  color: var(--color-blue);
 }
 
 img {
   cursor: pointer;
 }
 
-.link-efect::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-blue);
-  transition: width .5s;
-}
-
-.link-efect:hover::after {
-  width: 100%;
-  transition: width .5s;
-}
-
 .a-inline {
   display: inline-block;
 }
 
+/*Link + sgv*/
 .voltar-home {
   display: flex;
   justify-content: flex-end;
@@ -89,3 +79,17 @@ img {
   margin-left: 3px;
 }
 
+/*Efeito hover nos links*/
+.efect::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-blue);
+  transition: width .5s;
+}
+
+.efect:hover::after {
+  width: 100%;
+  transition: width .5s;
+}
