@@ -4,7 +4,17 @@
   }
 }
 
+@media (max-width: 600px) {
+  .navegation {
+    width: 60%;
+  }
+}
+
 @media (max-width: 500px) {
+  .navegation {
+    width: 70%;
+  }
+
   .container-personal .personal-image {
     width: 200px;
     height: 200px;
@@ -15,4 +25,16 @@
   .container-personal .text {
     margin: 50px 15px;
   }
-} 
+}
+
+@media (max-width: 300px) {
+  .navegation {
+    width: 85%;
+  }
+}
+
+@media (max-width: 250px) {
+  .navegation {
+    width: 100%;
+  }
+}

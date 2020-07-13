@@ -61,7 +61,7 @@ img {
   display: inline-block;
 }
 
-/*Link + sgv*/
+/*Link + svg*/
 .voltar-home {
   display: flex;
   justify-content: flex-end;
@@ -92,4 +92,8 @@ img {
 .efect:hover::after {
   width: 100%;
   transition: width .5s;
+}
+
+.efect-mobile {
+  color: var(--color-blue);
 }
