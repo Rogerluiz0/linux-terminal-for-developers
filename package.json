@@ -1,0 +1,28 @@
+{
+  "name": "linux-terminal-for-developers",
+  "version": "1.0.0",
+  "description": "Website for linux terminal studies",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Roger Luiz",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "_moduleAliases": {
+    "@": "src",
+    "@app": "src/app.js",
+    "@public": "public",
+    "@config": "src/config",
+    "@controller": "src/controller"
+  }
+}

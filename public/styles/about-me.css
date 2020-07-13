@@ -1,0 +1,66 @@
+span {
+  color: var(--color-blue);
+}
+
+.container-personal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-personal .personal-image {
+  width: 250px;
+  height: 250px;
+  border: 5px solid var(--color-blue);
+  border-radius: 50%;
+  background-image: url(/../images/abantes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+}
+
+.container-personal .personal-image:hover {
+  border-radius: 15%;
+  transition: border-radius 0.8s;
+}
+
+.container-personal .text {
+  text-align: center;
+  margin: 50px 200px;
+}
+
+.container-personal .links a {
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: var(--color-blue);
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  transition: background-color 0.8s linear; 
+}
+
+.container-personal .links a#github {
+  background-image: url(/../assets/github-logo.svg);
+}
+
+.container-personal .links a#twitter {
+  background-image: url(/../assets/twitter-logo.svg);
+}
+
+.container-personal .links a#instagram {
+  background-image: url(/../assets/instagram-logo.svg);
+}
+
+.container-personal .links a#linkedin {
+  background-image: url(/../assets/linkedin-logo.svg);
+}
+
+.container-personal .links a:hover {
+  background-color: rgba(85, 104, 249, 0.5);
+}

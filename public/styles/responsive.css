@@ -1,0 +1,18 @@
+@media (max-width: 850px) {
+  .container-personal .text {
+    margin: 50px 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container-personal .personal-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 460px) {
+  .container-personal .text {
+    margin: 50px 15px;
+  }
+} 

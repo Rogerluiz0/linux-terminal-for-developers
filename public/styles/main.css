@@ -1,0 +1,91 @@
+:root {
+  --color-gray: rgb(135, 134, 139);   /*Cinza*/ 
+  --color-black: rgb(17, 17, 22);     /*Preto*/  
+  --color-blue: rgb(85, 104, 249);    /*Azul*/
+  --color-purple: rgb(113, 89, 193);  /*Roxo*/
+}
+
+::selection {
+  color: var(--color-blue);
+  background-color: rgba(17, 17, 22, 0%);
+}
+
+a::selection {
+  color: var(--color-purple);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--color-gray);
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  line-height: 30px;
+}
+
+html::-webkit-scrollbar {
+  width: 7px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--color-blue);
+  border-radius: 5px;
+}
+
+body {
+  background-color: var(--color-black);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubunto', sans-serif;
+}
+
+a {
+  color: var(--color-blue);
+  display: block;
+}
+
+img {
+  cursor: pointer;
+}
+
+.link-efect::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-blue);
+  transition: width .5s;
+}
+
+.link-efect:hover::after {
+  width: 100%;
+  transition: width .5s;
+}
+
+.a-inline {
+  display: inline-block;
+}
+
+.voltar-home {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px;
+}
+
+.voltar-home img {
+  width: 30px;
+  height: 30px;
+}
+
+.voltar-home a {
+  color: var(--color-blue);
+  margin-left: 3px;
+}
+
