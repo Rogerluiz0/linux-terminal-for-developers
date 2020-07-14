@@ -6,15 +6,15 @@
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=5568f9&labelColor=111116">
 </p>
 
-<div align="center">
-  <h2 align="center">Desktop</h2>
+<p align="center">
+  <h2>Desktop</h2>
   <img src=".github/exemplo-home-page.svg" alt="Exemplo da interface no desktop" style="width: 100%;">  
-</div>
+</p>
 
-<div align="center">
-  <h2 align="center">Mobile</h2>
+<p style="width: 100%;" align="center">
+  <h2>Mobile</h2>
   <img src=".github/exemplo-personal-mobile.svg" alt="Exemplo da interface no mobile" height="600px;">  
-</div>
+</p>
 
 ## ⚙️ Requisítos
 
@@ -72,8 +72,8 @@ server.js
 
 ## ⬇️ Instalação
 
-- `git clone https://github.com/Rogerluiz0/starting-on-linux.git`;
-- `cd starting-on-linux`;
+- `git clone https://github.com/Rogerluiz0/linux-terminal-for-developers.git`;
+- `cd linux-terminal-for-developers`;
 - `npm install ou yarn install`;
 - `npm start ou yarn start`.
 
