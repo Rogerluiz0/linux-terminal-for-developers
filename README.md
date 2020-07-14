@@ -8,7 +8,7 @@
 
 <p style="width: 100%;" align="center">
   <h2>Desktop</h2>
-  <img src=".github/exemplo-home-page.png" alt="Exemplo da interface no desktop" style="width: 100%;">  
+  <img src=".github/exemplo-home-page.svg" alt="Exemplo da interface no desktop" style="width: 100%;">  
 </p>
 
 <p style="width: 100%;" align="center">
