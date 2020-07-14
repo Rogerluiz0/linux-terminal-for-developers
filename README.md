@@ -11,9 +11,9 @@
   <img src=".github/exemplo-home-page.svg" alt="Exemplo da interface no desktop" style="width: 100%;">  
 </p>
 
-<p align="center">
-  <h2 align="center">Mobile</h2>
-  <img src=".github/exemplo-personal-mobile.svg" alt="Exemplo da interface no mobile" height="600px;" style="width: 100%;">  
+<p align="center" style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+  <h2>Mobile</h2>
+  <img src=".github/exemplo-personal-mobile.svg" alt="Exemplo da interface no mobile" height="600px;">  
 </p>
 
 ## ⚙️ Requisítos
