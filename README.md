@@ -6,13 +6,13 @@
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=5568f9&labelColor=111116">
 </p>
 
-<div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
-  <h2>Desktop</h2>
+<div align="center">
+  <h2 align="center">Desktop</h2>
   <img src=".github/exemplo-home-page.svg" alt="Exemplo da interface no desktop" style="width: 100%;">  
 </div>
 
-<div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
-  <h2>Mobile</h2>
+<div align="center">
+  <h2 align="center">Mobile</h2>
   <img src=".github/exemplo-personal-mobile.svg" alt="Exemplo da interface no mobile" height="600px;">  
 </div>
 
