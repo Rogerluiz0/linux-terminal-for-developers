@@ -6,7 +6,7 @@
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=5568f9&labelColor=111116">
 </p>
 
-<p style="tex-align: center;">
+<p width="100%;" align="center">
   <h2>Desktop</h2>
   <img src=".github/exemplo-home-page.svg" alt="Exemplo da interface no desktop" style="width: 100%;">  
 </p>
