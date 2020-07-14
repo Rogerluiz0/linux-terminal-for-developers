@@ -29,7 +29,7 @@
   </div>
 
   <div class="container-main">
-    
+
     Terminal linux para desenvolvedores
 
     Primeiro vamos entender os tipos de usuários, no linux existem dois tipo de úsuario:
@@ -70,195 +70,241 @@
     /dev/ = Arquivos de dispositivos.
     /etc/ = Arquivos de configuração do sistema.
     /home/ = Diretório dos usuários comuns do sistema.
-    /lib/    =  Bibliotecas essenciais do sistema e os módulos do kernel.
-    /media/  =  Diretório de montagem e dispositivos.
-    /mnt/    =  Diretório de montagem de dispositivos - mesmo que "media".
-    /opt/    =  Instalação de programas não oficiais da distribuição ou por conta do usuário.
-    /sbin/   =  Armazena arquivos executáveis que representam comandos administrativos. Exemplo: shutdown
-    /srv/    =  Diretório para dados de serviços fornecidos pelo sistema.
-    /tmp/    =  Diretório para arquivos temporários.
-    /usr/    =  Segunda hierarquia do sistema, onde ficam os usuários comuns do sistema e programas.
-    /var/    =  Diretório com arquivos variáveis gerados pelos programas do sistema. Exemplo: logs, spool de impressoras, e-mail e cache.
-    /root/   =  Diretório do usuário root - O usuário root tem o total poder sobre o sistema. Podendo instalar, desinstalar e configurar.
-    /proc/   =  Diretório virtual controlado pelo Kernel com configuração total do sistema.
+    /lib/ = Bibliotecas essenciais do sistema e os módulos do kernel.
+    /media/ = Diretório de montagem e dispositivos.
+    /mnt/ = Diretório de montagem de dispositivos - mesmo que "media".
+    /opt/ = Instalação de programas não oficiais da distribuição ou por conta do usuário.
+    /sbin/ = Armazena arquivos executáveis que representam comandos administrativos. Exemplo: shutdown
+    /srv/ = Diretório para dados de serviços fornecidos pelo sistema.
+    /tmp/ = Diretório para arquivos temporários.
+    /usr/ = Segunda hierarquia do sistema, onde ficam os usuários comuns do sistema e programas.
+    /var/ = Diretório com arquivos variáveis gerados pelos programas do sistema. Exemplo: logs, spool de impressoras, e-mail e cache.
+    /root/ = Diretório do usuário root - O usuário root tem o total poder sobre o sistema. Podendo instalar, desinstalar e configurar.
+    /proc/ = Diretório virtual controlado pelo Kernel com configuração total do sistema.
 
+    comando ls
 
-    O comando ls é usado para listar o conteúdo de uma pasta.
+    O comando ls é usado para listar o conteúdo de um diretório.
 
-    ls      =  Lista arquivos e diretórios.
-    ls -a   =  Lista todos os arquivos e diretórios, incluindo arquivos ocultos.
-    ls -l   =  Lista arquivos e diretórios com informações.
-    ls -h   =  Lista arquivos e diretórios com informações formatadas (* Tem que ser usado com o -l *).
-    ls -ls  =  Lista arquivos e diretórios pelo tamanho, no caso começará pelo o arquivo de maior tamanho.
-    ls -R   =  Lista os arquivos e pastas recursivamente da pasta selecionada.
+    ls = Lista arquivos e diretórios.
+    ls -r = Lista arquivos e diretórios em ordem reversa.
+    ls -a = Lista todos os arquivos e diretórios, incluindo arquivos ocultos.
+    ls -l = Formato longo, mostra permissões, número de links, propietário, grupo, tamanho, data de modificação e nome do arquivo.
+    ls -h = Lista arquivos e diretórios com informações formatadas (* Tem que ser usado com o -l *).
+    ls -ls = Lista arquivos e diretórios pelo tamanho, no caso começará pelo o arquivo de maior tamanho.
+    ls -R = Lista os arquivos e pastas recursivamente da pasta selecionada.
+    ls -m = Arquivos listados em sequência, separados por vírgula.
+    ls -n = Semelhante ao -l, porém mostra UID E GID Em vez de nomes de proprietário e grupo.
+    ls -o = Semelhante ao -l, porém não mostra o grupo do arquivo.
+    ls -p = Mostra uma barra (/) na frente de nomes de diretórios.
+    ls -A = Semelhante ao -a, mas não mostra o diretório corrente (.) ou o diretório acima (..).
+    ls -i = Mostra o número do inode de cada arquivo na primeira coluna.
 
+    comando cd
 
     O comando cd é usado para entrar em uma determinda pasta.
 
-    cd . ou .      =  Diretório atual.
-    cd ..          =  Volta um diretório.
-    cd /           =  Vai direto para o diretório raiz.
-    cd ~           =  Vai direto para o diretório home.
-    cd -           =  Nos retorna para o último diretório acessado
-    cd /diretorio  =  Partindo da raiz até o último diretório passado como referência
-    cd diretorio   =  Parte do local corrente até o diretório passado como referência
+    cd . ou . = Diretório atual.
+    cd .. = Volta um diretório.
+    cd / = Vai direto para o diretório raiz.
+    cd ~ = Vai direto para o diretório home.
+    cd - = Nos retorna para o último diretório acessado
+    cd /diretorio = Partindo da raiz até o último diretório passado como referência
+    cd diretorio = Parte do local corrente até o diretório passado como referência
 
+    comando pwd
 
-    pwd  =  Exibe o caminho de diretório atual.
-
+    pwd = Exibe o caminho de diretório atual.
+    
+    comando mkdir
 
     O comando mkdir é usado para criar pastas
 
-    mkdir nomeDaPasta          =  Cria uma pasta.
-    mkdir pasta1 pasta2 pasta3 =  Cria três pastas, pasta1, pasta2 e pasta3.
-    mkdir -p A/B/C             =  Cria a pasta A, dentro da pasta A cria a pasta B e dentro da pasta B cria a pasta C.
+    mkdir nomeDaPasta = Cria uma pasta.
+    mkdir pasta1 pasta2 pasta3 = Cria três pastas, pasta1, pasta2 e pasta3.
+    mkdir -p A/B/C = Cria a pasta A, dentro da pasta A cria a pasta B e dentro da pasta B cria a pasta C.
 
-
-    du  =  Exibe o tamanho de um diretório e todos os seus subdiretórios.
-
-
+    comando du
+    
+    du = Exibe o tamanho de um diretório e todos os seus subdiretórios.
+    
+    comando touch
+    
     O comando touch é usado para criar arquivos.
 
-    touch arquivo.extenção      =  Cria uma arquivo.
-    touch -a arquivo.extenção   =  Altera a hora de acesso do arquivo.
-    touch -m arquivo.extenção   =  Altera a hora de modificação do arquivo.
-    touch -am arquivo.extenção  =  Altera a hora de acesso e modificação do arquivo.
-    touch -c arquivo.extenção   =  Altera a hora de acesso sem criar um novo arquivo.
+    touch arquivo.extenção = Cria uma arquivo.
+    touch -a arquivo.extenção = Altera a hora de acesso do arquivo.
+    touch -m arquivo.extenção = Altera a hora de modificação do arquivo.
+    touch -am arquivo.extenção = Altera a hora de acesso e modificação do arquivo.
+    touch -c arquivo.extenção = Altera a hora de acesso sem criar um novo arquivo.
 
-    Obs: podemos gerar nomes automaticos usando as chaves ({}) enquanto criamos varios arquivos desta maneira touch exemplo{4..6}.txt, este comando irá criar 3 arquivos chamados exemplo4.txt, exemplo5.txt e exemplo6.txt.
+    Obs: podemos gerar nomes automaticos usando as chaves {} desta maneira: touch exemplo{4..6}.txt, este comando irá criar 3 arquivos chamados exemplo4.txt, exemplo5.txt e exemplo6.txt.
 
-
+    comando rm
+    
     O comando rm é usado para excluir arquivos.
 
-    rm        =  Exclui um arquivo.
-    rm -f     =  Exclui arquivos forçadamente.
-    rm -r     =  Exclui o diretório e os arquivos na direção recursiva, o diretório especificado junto com seu subdiretório e arquivos.
-    rm -d ou  =  Remove somente diretórios vazios
-    rm -i     =  Pergunta se queremos remover o arquivo/diretório antes de excluir
-    rm -rf    =  (rm -r) + (rm -f) ( Utilize esse comando com extrema atenção! ).
-
-
+    rm = Exclui um arquivo.
+    rm -f = Exclui arquivos forçadamente.
+    rm -r = Exclui o diretório e os arquivos na direção recursiva, o diretório especificado junto com seu subdiretório e arquivos.
+    rm -d ou = Remove somente diretórios vazios
+    rm -i = Pergunta se queremos remover o arquivo/diretório antes de excluir
+    rm -rf = (rm -r) + (rm -f) ( Utilize esse comando com extrema atenção! ).
+    
+    comando cp
+    
     O comando cp é usado para copiar arquivos.
 
-    cp arquivo destino
+    cp [opções] [arquivo] [destino]
 
-    cp -i           =  Pergunta se desejamos sobrescrever um arquivo destino já existente.
-    cp -n           =  Não sobrescreve um arquivo já existente.
-    cp -r ou cp -R  =  Copia diretórios de forma recursiva.
-    cp -p           =  Preserva as permissões originais do arquivo (proprietário, grupo, etc.).
+    cp -i [arquivo] [destino] = Pergunta se desejamos sobrescrever um arquivo destino já existente.
+    cp -n [arquivo] [destino] = Não sobrescreve um arquivo já existente.
+    cp -r [arquivo] [destino] = Copia diretórios de forma recursiva.
+    cp -p [arquivo] [destino] = Preserva as permissões originais do arquivo (proprietário, grupo, etc.).
+    cp -vr [origem] [destino] = copiar diretorio recursivamente
 
-
+    comando mv
+    
     O comando mv é usado para mover arquivos.
 
-    mv arquivo destino.
+    mv [arquivo] [destino].
 
-    mv -b  =  Cria um backup de cada arquivo destino existente.
-    mv -f  =  Apaga destinos existente sem perguntar ao usuário.
-    mv -i  =  Pergunta se desejamos sobrescrever o arquivo destino já existente.
-    mv -n  =  Não sobrescrever um arquivo destino já existente.
-
+    mv -b = Cria um backup de cada arquivo destino existente.
+    mv -f = Apaga destinos existente sem perguntar ao usuário.
+    mv -i = Pergunta se desejamos sobrescrever o arquivo destino já existente.
+    mv -n = Não sobrescrever um arquivo destino já existente.
 
     O comando mv também é usado para renomear arquivos.
 
     mv nomeOriginal novoNome
 
-    cat nomeDoArquivo.extenção   =  Abre o arquivo em modo de visualização.
-    more nomeDoArquivo.extenção  =  Exibi o conteúdo de um arquivo na tela aos poucos.
-    less nomeDoArquivo.extenção  =  Exibi o conteúdo de um arquivo páginado.
-    tac nomeDoArquivo.extenção   =  Exibi o conteúdo de um arquivo de trás pra frente (Da última linha pra primeira).
-    nano nomeDoArquivo.extenção  =  Se o arquivo existir ele abre o nano para edição do arquivo, se não ele cria o arquivo e abre o nano.
-
+    Visualização de arquivos
+    
+    more [arquivo] = mostra o conteudo em partes
+    less [arquivo] = Exibi o conteúdo de um arquivo páginado.
+    tac [arquivo] = Exibi o conteúdo de um arquivo de trás pra frente (da última linha pra primeira).
+    
+    cat [opção] [arquivo] = Abre o arquivo em modo de visualização.
+    cat -E [arquivo] = Marca o término de linha mostrando o caractere $ ao final de cada uma delas.
+    cat -n [arquivo] = Mostra a quantidade de linas do arquivo.
+    cat -v [arquivo] = Exibe caracteres não exibíveis.
+    cat -T [arquivo] = Exibe tabulação mostradas como ^I.
+    cat -s [arquivo] = Remove linhas repetidas em branco.
+    cat -b [arquivo] = Numera as linhas que possuem algum conteúdo.
+    cat [arquivo] | grep [busca] = busca no arquivo (case sensitive)
+    cat [arquivo] | grep [busca] -i = busca no arquivo (case insensitive)
+    cat [arquivo] > [arquivo] = copia o conteúdo do arquivo para outro
+    cat [arquivo] >> [arquivo] = adiciona o conteúdo do arquivo para outro
 
     Processos
 
-    top           =  Exibe os processos usando a maioria dos recursos do sistema, a qualquer momento. "Q" pode ser usado para sair.
-    ps            =  O comando ps nos permite obter informações sobre o estado dos processos que estão sendo executados no momento.
-    ps aux        =  Processos mais detalhados.
-    kill pid      =  Mata o processo com o id de processo pid.
-    killall proc  =  Mata todos os processo com o nome proc.
+    top = Exibe os processos usando a maioria dos recursos do sistema, a qualquer momento. "Q" pode ser usado 
+    para sair.
+    
+    htop = O comando HTOP é uma evolução do comando TOP. As informações são semelhantes às produzidas pelo comando TOP, mas apresentadas num interface mais intuitivo e colorido.
+    
+    ps [opções]
+    ps = O comando ps exibe informações sobre os processos que estão executando na máquina.
+    ps -a = Mostra os processos de todos os usuários.
+    ps -A ou -e = Mostra todos os processos.
+    ps -f = Mostra a árvore de execução de comandos.
+    ps -g [grupo] = Mostra os processos de um determinado grupo.
+    ps -x = Mostra os processos que não foram iniciados no console.
+    ps -u = Fornece o nome do usuário e a hora de início do processo.
+    ps -aux = exibe todos os processos do sistema independente de terminal.
+
+    kill pid = Mata o processo com o id de processo pid.
+    killall Discord = Mata todos os processo com o nome discord.
+    pkill fire - Mata todos os processo que tenha "fire" em seu nome.
 
 
-    Sistema
+    Informações do sistema
 
-    uname -a ou uname --all imprime todas as informações, omitindo uname -p e uname -i se as informações forem desconhecidas. Se uname -a for especificado, as informações serão impressas na seguinte ordem de opções individuais:
-    whereis nomeDoPrograma                 =  Exibe possíveis localizações de um determinado programa.
-    uname -s ou uname --kernel-name        =  Imprime o nome do kernel.
-    uname -n ou uname --nodename           =  Imprime o nome do host do nó da rede.
-    uname -r ou uname --kernel-release     =  Imprime a versão do kernel.
-    uname -v ou uname --kernel-version     =  Imprime a versão do kernel.
-    uname -m ou uname --machine            =  Imprime o nome do hardware da máquina.
-    uname -p ou uname --processor          =  Imprime o tipo de processador ou ” desconhecido “.
-    uname -i ou uname --hardware-platform  =  Imprime a plataforma de hardware, ou ” desconhecido “.
-    uname -o ou uname --operating-system   =  Imprime o sistema operacional.
-    uname --version                        =  Exibe informações da versão.
-    date                                   =  Exibe a data e hora atual.
-    free                                   =  Este comando exibe a quantidade de espaço livre disponível no sistema.
-    df                                     =  Exibe informações sobre o uso do espaço em disco de todos os sistemas de arquivos montados.
-
-
+    uname -a ou uname --all imprime todas as informações, omitindo uname -p e uname -i se as informações forem desconhecidas.
+    whereis nomeDoPrograma = Exibe possíveis localizações de um determinado programa.
+    uname -s ou uname --kernel-name = Imprime o nome do kernel.
+    uname -n ou uname --nodename = Imprime o nome do host do nó da rede.
+    uname -r ou uname --kernel-release = Imprime a versão do kernel.
+    uname -v ou uname --kernel-version = Imprime a versão do kernel.
+    uname -m ou uname --machine = Imprime o nome do hardware da máquina.
+    uname -p ou uname --processor = Imprime o tipo de processador ou ” desconhecido “.
+    uname -i ou uname --hardware-platform = Imprime a plataforma de hardware, ou ” desconhecido “.
+    uname -o ou uname --operating-system = Imprime o sistema operacional.
+    uname --version = Exibe informações da versão.
+    date = Exibe a data e hora atual.
     whoami  =  Imprime o nome de usuário usado no momento em que foi digitado.
     sudo su =  Entra no modo usuário root.
+    df = informações de partição
+    
     Observação: Quando você for digitar sua senha para entrar no modo usuário root, por questões de segurança o terminal não exibe nada na tela o que foi digitado.
-
-
     exit  =  Sai do usuário root.
 
+    Memória
 
-    Atualização
+    free = Este comando exibe a quantidade de espaço livre disponível no sistema.
+    df = Exibe informações sobre o uso do espaço em disco de todos os sistemas de arquivos montados.
+    df [opções]
+    df -a = Inclui sistema de arquivos com 0 (zero) blocos.
+    df -h = Mostra o espaço livre/ocupado em MB, KB, GB em vez de bloco.
+    df -k = Lista em Kbyts.
+    df -l = Somente lista sistema de arquivos locais.
+    df -m = Lista em Mbytes.
+    df -T = Lista o tipo de sistema de arquivos de cada partição.
 
-    sudo apt-get update   =  Atualiza a lista de pacotes e programas que podem ser instalados na máquina.
-    sudo apt-get upgrade  =  Atualiza o sistema e baixa e instala atualizações de pacotes e dos programas da máquina.
-    Observação: os dois comandos acima devem ser ultilizados em conjunto para que o sistema seja atualizado.
+    comando apt
 
+    sudo apt-get update = baixa os pacotes disponíveis
 
-    Programas e pacotes
+    sudo apt-get upgrade = atualiza os pacotes do sistema
 
-    sudo apt install nomeDoPrograma  =  Instala um determinado programa na máquina.
-    sudo apt remove nomeDoPrograma   =  Desinstala um determinado programa na máquina.
-    sudo apt-get clean               =  Limpa o cache de pacotes baixados.
+    sudo apt-get clean = remover cache de pacotes
 
+    sudo apt-get cache [busca] = busca um pacote
+
+    sudo apt-get install [pacote] = instala um pacote
+
+    sudo apt-get remove [pacote] --purge = remove pacotes e configs
 
     Compressão
 
-    tar cf pacote.tar arqs      = Cria um pacote TAR (nomeado pacote.tar) com os arquivos especificados (substituir a variável arqs pelo nome do arquivo).
-    tar xf pacote.tar           = Extrai os arquivos de “pacote.tar” (substituir a variável pacote.tar pelo nome do arquivo).
-    tar czf pacote.tar.gz arqs  = Cria um pacote TAR (nomeado pacote.tar.gz) com compressão GZip.
-    tar xzf pacote.tar.gz       = Extrai um pacote TAR (nomeado pacote.tar.gz) com compressão GZip.
-    tar cjf pacote.tar.bz2      = Cria um pacote TAR (nomeado pacote.tar.bz2) com compressão BZip2.
-    tar xjf pacote.tar.bz2      = Extrai um pacote TAR (nomeado pacote.tar.gz) com compressão BZip2.
-    gzip arq                    = Compacta um arquivo e o renomeia para arq.gz (substituir a variável arq pelo nome do arquivo).
-    gzip -d arq.gz              = Descompacta arq.gz para um arquivo (substituir a variável arq.gz pelo nome do arquivo).
-
+    tar cf pacote.tar arqs = Cria um pacote TAR (nomeado pacote.tar) com os arquivos especificados (substituir a variável arqs pelo nome do arquivo).
+    tar xf pacote.tar = Extrai os arquivos de “pacote.tar” (substituir a variável pacote.tar pelo nome do arquivo).
+    tar czf pacote.tar.gz arqs = Cria um pacote TAR (nomeado pacote.tar.gz) com compressão GZip.
+    tar xzf pacote.tar.gz = Extrai um pacote TAR (nomeado pacote.tar.gz) com compressão GZip.
+    tar cjf pacote.tar.bz2 = Cria um pacote TAR (nomeado pacote.tar.bz2) com compressão BZip2.
+    tar xjf pacote.tar.bz2 = Extrai um pacote TAR (nomeado pacote.tar.gz) com compressão BZip2.
+    gzip arq = Compacta um arquivo e o renomeia para arq.gz (substituir a variável arq pelo nome do arquivo).
+    gzip -d arq.gz = Descompacta arq.gz para um arquivo (substituir a variável arq.gz pelo nome do arquivo).
 
     Histórico de comandos
 
-    history                           =  Lista o histórico de 2000 comandos digitados.
-    Seta para cima e seta para baixo  =  Últimos comandos digitados.
-
+    history = Lista o histórico de 2000 comandos digitados.
+    Seta para cima e seta para baixo = Últimos comandos digitados.
 
     Ajuda
 
-    comando --help  =  Documentação do comando.
-    man comando     =  Manual do comando.
-    info comando    =  Semelhante ao man, mas geralmente fornece informações mais detalhadas ou precisas.
+    [comando] --help = Documentação do comando.
+    man [comando] = Manual do comando.
+    info [comando] = Semelhante ao man, mas geralmente fornece informações mais detalhadas ou precisas.
 
 
     Referência global
 
     Referências globais são recursos para especificar um ou mais arquivos ou diretórios de uma vez.
     Vamos usar o comando 'ls' para os exemplos, mas pode ser usado qualquer outro comando.
-    ls /etc/*.conf           =  Lista todos os arquivos que tem a extenção '.conf'.
-    ls /etc/*x*              =  Lista todos os aquivos que em algum lugar do nome tem a lera 'x'.
-    ls /etc/f*               =  Lista todos os aquivos que começa com a letra 'f'.
-    ls /etc/?as*             =  Lista todos os arquivos que começa com uma letra qualquer, tem segundo caractere 'a', o terceiro 's' e qualquer caractere depois.
-    ls /etc/???a*            =  Lista todos os arquivos que tem o quarto caractere 'a'.
-    ls /etc/f[a-t]*          =  Lista todos os aqruivos que começa com a letra 'f', depois a segunda letra varia do 'a' ao 't' e depois qualquer caractere.
-    ls /etc/f[u,o]*          =  Lista todos os aqruivos que começa com a letra 'f', depois a segunda letra é 'u' ou 'o' e depois qualquer caractere.
-    ls /etc/?[a,e,i,o,u]*    =  Lista todos os aqruivos que começa com uma letra qualquer, depois a segunda letra é uma vogal e depois qualquer caractere.
-    ls /etc/?[a,e,i,o,u]???  =  Lista todos os aqruivos que começa com uma letra qualquer, depois a segunda letra é uma vogal e depois tem mais 3 caracteres qualquer.
-    ls /etc/?{am,ul}*        =  Lista todos os aqruivos que começa com uma letra qualquer, depois a segunda e a terceira letra é 'am' ou 'ul' e depois qualquer caractere.
-    ls /etc/*{ev,ux}         =  Lista todos os aqruivos que termina com 'ev' ou 'ux'.
-    ls /etc/*.{conf,db}      =  Lista todos os aqruivos que tem a extenção '.conf' ou '.db'.
+    ls /etc/*.conf = Lista todos os arquivos que tem a extenção '.conf'.
+    ls /etc/*x* = Lista todos os aquivos que em algum lugar do nome tem a lera 'x'.
+    ls /etc/f* = Lista todos os aquivos que começa com a letra 'f'.
+    ls /etc/?as* = Lista todos os arquivos que começa com uma letra qualquer, tem segundo caractere 'a', o terceiro 's' e qualquer caractere depois.
+    ls /etc/???a* = Lista todos os arquivos que tem o quarto caractere 'a'.
+    ls /etc/f[a-t]* = Lista todos os aqruivos que começa com a letra 'f', depois a segunda letra varia do 'a' ao 't' e depois qualquer caractere.
+    ls /etc/f[u,o]* = Lista todos os aqruivos que começa com a letra 'f', depois a segunda letra é 'u' ou 'o' e depois qualquer caractere.
+    ls /etc/?[a,e,i,o,u]* = Lista todos os aqruivos que começa com uma letra qualquer, depois a segunda letra é uma vogal e depois qualquer caractere.
+    ls /etc/?[a,e,i,o,u]??? = Lista todos os aqruivos que começa com uma letra qualquer, depois a segunda letra é uma vogal e depois tem mais 3 caracteres qualquer.
+    ls /etc/?{am,ul}* = Lista todos os aqruivos que começa com uma letra qualquer, depois a segunda e a terceira letra é 'am' ou 'ul' e depois qualquer caractere.
+    ls /etc/*{ev,ux} = Lista todos os aqruivos que termina com 'ev' ou 'ux'.
+    ls /etc/*.{conf,db} = Lista todos os aqruivos que tem a extenção '.conf' ou '.db'.
+    find . -name "referência globai" = busca um arquivo com um nome especifico
 
 
 
@@ -271,28 +317,12 @@
 
 
     COMANDOS BÁSICOS
-
-    mkdir = criar diretorio
-    touch = criar arquivo
-    ls -l = ver tipos de arquivo
-    touch .qualquernome = criação de arquivo oculto
-    ls -la = lista todos os arquivos, até ocultos
-    rm = remover arquivo 
-    rm arquivo = remove um unico arquivo
-    rm -rf diretorio = remover um diretorio
-    rm -rf * = remove tudo dentro de um contexto
-    mv arquivo nomenovo = renomear arquivo
-    sudo chown euller diretorio= muda o dono do arquivo
-    find . -name arquivo = buscar um arquivo
-    find . -name "oi*" = buscar um arquivo
+    sudo chown euller diretorio = muda o dono do arquivo
     ls -la | grep oi = busca arquivos com um filtro
     ln -s framework framework2 = cria um link simbolico de framework pra framework2
-    cat arquivo = exibe o conteudo de uma arquivo
-    top = tempo real de tudo que está acontecendo na máquina
-    whoami = mostra o usuário logado
 
     Linux 
-    d=diretorio , a = arquivo, s=socket
+    d = diretorio , a = arquivo, s = socket
 
     PERMISSOES DE ARQUIVO
 
@@ -324,65 +354,6 @@
 
     Cuidado com 777 - Ultimo 7, deixa até o usuário anonimo ler executar e escrever no arquivo (MUITO SÉRIO)
 
-    COMANDOS VIM 
-
-    vim arquivo = abrir arquivo
-    tecla i = inserir texto
-    G  – Ir para o final do arquivo
-    g   – Ir para o início do arquivo
-    $   – Ir para o final da linha
-    0   – Ir para o início da linha
-    :n  – Ir para a linha “n”. Exemplo: Para ir para linha 10 do arquivo, :10
-    dd = apagar a linha
-    uu = voltar as modificações
-    shift + dolar = final da linha
-    yy + p = duplicar a linha
-    :wq = salva e sai
-    :w apenas salva
-    :q! = sair sem salvar
-
-
-
-
-
-
-    man [comando] (mostra o manual do comando)
-
-    cd (raiz do diretorio)
-
-    pwd (mostra diretorio atual)
-
-    ls - listagem (-l)
-
-    cp [origem] [destino] - copiar
-
-    cp -vr [origem] [destino] - copiar diretorio recursivamente
-
-    cat [arquivo] (mostrar o conteúdo do arquivo)
-
-    cat [arquivo] | more (mostra o conteudo em partes)
-
-    cat [arquivo] | less (mostra e caminha no arquivo)
-
-    cat [arquivo] | grep [busca] (busca no arquivo - case sensitive)
-
-    cat [arquivo] | grep [busca] -i (busca no arquivo - case insensitive)
-
-    cat [arquivo] > [arquivo] (copia o conteúdo do arquivo para outro)
-
-    cat [arquivo] >> [arquivo] (adiciona o conteúdo do arquivo para outro)
-
-    df (informações de partição)
-
-    du -h (informações de diretório)
-
-    free (informações de memória)
-
-    mkdir [diretorio] (cria diretorio)
-
-    rm -d [diretorio] (remover diretorio - vazio)
-
-    rm -rf [diretorio] (força remover diretorio)
 
     chmod
     rwx - 1/0
@@ -399,30 +370,6 @@
     rwx - grupo
     rwx - usuario
     
-    editores
-    vim
-    vim [arquivo] (abre arquivo) vim [arquivo] + (final do arquivo) vim [arquivo] +[numero] (linha numero) vim [arquivo] /[busca] (primeira o ocorrencia de busca)
-
-    i (modo de inserção)
-
-    esc (modo de comando)
-
-    :q! (sair forçado) :wq! (salvar e sair forçado) :x (salvar e sair)
-
-    ! - forçado
-
-    apt
-    apt-get update (baixa os pacotes disponíveis)
-
-    apt-get upgrade (atualiza os pacotes do sistema)
-
-    apt-get clean (remover cache de pacotes)
-
-    apt-get cache [busca] (busca um pacote)
-
-    apt-get install [pacote] (instala um pacote)
-
-    apt-get remove [pacote] --purge (remove pacotes e configs)
 
     usuários e grupos
     usuários
@@ -457,6 +404,52 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   COMANDOS VIM 
+
+    vim arquivo = abrir arquivo
+    tecla i = inserir texto
+    G  – Ir para o final do arquivo
+    g   – Ir para o início do arquivo
+    $   – Ir para o final da linha
+    0   – Ir para o início da linha
+    :n  – Ir para a linha “n”. Exemplo: Para ir para linha 10 do arquivo, :10
+    dd = apagar a linha
+    uu = voltar as modificações
+    shift + dolar = final da linha
+    yy + p = duplicar a linha
+    :wq = salva e sai
+    :w apenas salva
+    :q! = sair sem salvar
+    
+    editores
+    vim
+    vim [arquivo] (abre arquivo) vim [arquivo] + (final do arquivo) vim [arquivo] +[numero] (linha numero) vim [arquivo] /[busca] (primeira o ocorrencia de busca)
+
+    i (modo de inserção)
+
+    esc (modo de comando)
+
+    :q! (sair forçado) :wq! (salvar e sair forçado) :x (salvar e sair)
+
+    ! - forçado
 
 
 
