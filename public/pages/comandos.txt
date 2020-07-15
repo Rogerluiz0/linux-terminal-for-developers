@@ -1,0 +1,389 @@
+
+    
+
+    Memória
+
+    free = Este comando exibe a quantidade de espaço livre disponível no sistema.
+    df = Exibe informações sobre o uso do espaço em disco de todos os sistemas de arquivos montados.
+    df [opções]
+    df -a = Inclui sistema de arquivos com 0 (zero) blocos.
+    df -h = Mostra o espaço livre/ocupado em MB, KB, GB em vez de bloco.
+    df -k = Lista em Kbyts.
+    df -l = Somente lista sistema de arquivos locais.
+    df -m = Lista em Mbytes.
+    df -T = Lista o tipo de sistema de arquivos de cada partição.
+
+    comando apt
+
+    sudo apt-get update = baixa os pacotes disponíveis
+
+    sudo apt-get upgrade = atualiza os pacotes do sistema
+
+    sudo apt-get clean = remover cache de pacotes
+
+    sudo apt-get cache [busca] = busca um pacote
+
+    sudo apt-get install [pacote] = instala um pacote
+
+    sudo apt-get remove [pacote] --purge = remove pacotes e configs
+
+    Compressão
+
+    tar cf pacote.tar arqs = Cria um pacote TAR (nomeado pacote.tar) com os arquivos especificados (substituir a variável arqs pelo nome do arquivo).
+    tar xf pacote.tar = Extrai os arquivos de “pacote.tar” (substituir a variável pacote.tar pelo nome do arquivo).
+    tar czf pacote.tar.gz arqs = Cria um pacote TAR (nomeado pacote.tar.gz) com compressão GZip.
+    tar xzf pacote.tar.gz = Extrai um pacote TAR (nomeado pacote.tar.gz) com compressão GZip.
+    tar cjf pacote.tar.bz2 = Cria um pacote TAR (nomeado pacote.tar.bz2) com compressão BZip2.
+    tar xjf pacote.tar.bz2 = Extrai um pacote TAR (nomeado pacote.tar.gz) com compressão BZip2.
+    gzip arq = Compacta um arquivo e o renomeia para arq.gz (substituir a variável arq pelo nome do arquivo).
+    gzip -d arq.gz = Descompacta arq.gz para um arquivo (substituir a variável arq.gz pelo nome do arquivo).
+
+    Histórico de comandos
+
+    history = Lista o histórico de 2000 comandos digitados.
+    Seta para cima e seta para baixo = Últimos comandos digitados.
+
+    Referência global
+
+    Referências globais são recursos para especificar um ou mais arquivos ou diretórios de uma vez.
+    Vamos usar o comando 'ls' para os exemplos, mas pode ser usado qualquer outro comando.
+    ls /etc/*.conf = Lista todos os arquivos que tem a extenção '.conf'.
+    ls /etc/*x* = Lista todos os aquivos que em algum lugar do nome tem a lera 'x'.
+    ls /etc/f* = Lista todos os aquivos que começa com a letra 'f'.
+    ls /etc/?as* = Lista todos os arquivos que começa com uma letra qualquer, tem segundo caractere 'a', o terceiro 's' e qualquer caractere depois.
+    ls /etc/???a* = Lista todos os arquivos que tem o quarto caractere 'a'.
+    ls /etc/f[a-t]* = Lista todos os aqruivos que começa com a letra 'f', depois a segunda letra varia do 'a' ao 't' e depois qualquer caractere.
+    ls /etc/f[u,o]* = Lista todos os aqruivos que começa com a letra 'f', depois a segunda letra é 'u' ou 'o' e depois qualquer caractere.
+    ls /etc/?[a,e,i,o,u]* = Lista todos os aqruivos que começa com uma letra qualquer, depois a segunda letra é uma vogal e depois qualquer caractere.
+    ls /etc/?[a,e,i,o,u]??? = Lista todos os aqruivos que começa com uma letra qualquer, depois a segunda letra é uma vogal e depois tem mais 3 caracteres qualquer.
+    ls /etc/?{am,ul}* = Lista todos os aqruivos que começa com uma letra qualquer, depois a segunda e a terceira letra é 'am' ou 'ul' e depois qualquer caractere.
+    ls /etc/*{ev,ux} = Lista todos os aqruivos que termina com 'ev' ou 'ux'.
+    ls /etc/*.{conf,db} = Lista todos os aqruivos que tem a extenção '.conf' ou '.db'.
+    find . -name "referência globai" = busca um arquivo com um nome especifico
+
+    Usuários
+
+    Comando passwd
+    
+    passwd [opções] [usuários]
+    passwd -l = Trava a senha do usuário, ficando impedido de se logar e não pode trocar a senha (não é desabilitado).
+    passwd -u = Destrava a senha do usuário.
+    passwd -d = Exclui a senha do usuário.
+    passwd -e = Expira a senha do usuário, forçando-o a fornecer uma nova ao logar-se novamente.
+    passwd -x dias = Expira a senha do usuário quando atingir o número de dias especificados.
+    passwd -n dias = define a quantidade mínima de dias que o usuário deverá esperar para trocar a senha.
+    passwd -w dias = define a quantidade mínima de dias que o usuário receberá o aviso que a senha precisa ser alterada.
+    passwd -i = deixa o usuário inativo, caso a senha tenha expirado.
+    passwd -S = Exibe o status da conta.
+    passwd -a = Usada em conjunto com a opção -S mostra o status das contas de todos os usuários.
+
+    Agora vamos entender os tipos de usuários, no linux existem três tipo de úsuario:
+
+    Usuários comuns
+    São os usuários que podem se conectar no sistema. Geralmente, estes usuários possuem uma home e podem manipular arquivos quando tem as permissões para tal. Porém estes usuários geralmente não tem permissão para certos arquivos e diretórios na maquina e não podem executar muitas funções a nível de sistema.
+    roger@AB4NT5S:~$
+
+    Usuários de sistema
+    Diferente dos usuários comuns, estes usuários não se conectam no sistema. São contas usadas para tarefas específicas dentro do sistema que não são de propriedade de uma pessoa em particular.
+
+    Root
+    O usuário root, também chamado de superusuário, tem controle total sobre o sistema operacional. Ele pode acessar todos os arquivos e normalmente é o único que pode executar certos programas, como por exemplo o httpd.
+    root@AB4NT5S:~#
+
+    Nota: Não é recomendado que você use o terminal no modo root o tempo inteiro.
+
+    Grupos
+    Um grupo é um conjunto de um ou mais usuários. É interessante reunir vários usuários em um grupo para definir suas propriedades, como as permissões. Como o arquivo passwd nós temos um arquivo somente para armazenar detalhes sobre os grupos.
+
+    Esse arquivo esta localizado em /etc/group.
+
+    Gerenciamento de usuários
+
+    Adicionar usuários
+
+    Criar um usuário novo no Linux é bem simples, apenas é necessário o comando useradd e indicar o nome do novo usuário.
+    useradd [opções] [nomeusuario]
+    useradd -d  [nomeusuario] = define o nome do diretório home do usuário (mas não o cria).
+    useradd -s  [nomeusuario] = define o shell padrão do usuário.
+    useradd -h  [nomeusuario] = exibe as opções do comando.
+
+    Alterar usuários
+
+    Para alterarmos uma conta de usuário basta apenas utilizarmos o comando usermod.
+    usermod [opções] [nomeusuário]
+    usermod -d diretório [-m] = cria uma nova home para o usuário. A opção -m move os arquivos da home atual do usuário para a nova.
+    usermod -e yyyy-mm-dd = altera a data de expiração da conta do usuário
+    usermod -g grupo = altera o GID do grupo do usuário para o especificado.
+    usermod -G grupo[, grupo2, ...] = define o GID dos outros grupos que o usuário pertence.
+    usermod -l nome = altera o nome do usuário (ele não pode estar logado).
+    usermod -s shell = altera o shell do usuário.
+    usermod -u uid = altera o número de UID do usuário
+
+    Remover usuários
+    Para removermos um usuário utilizamos o comando userdel.
+    userdel [opções] [nomeusuario]
+    userdel -h [nomeusuario] = exibe as opções do comando
+    userdel -r [nomeusuario] = deleta a home e todos os seus arquivos
+
+    vim
+
+    Eu escolhi o editor vim para este artigo, mas você pode e deve usar vários editores além do vim como o nano por exemplo.
+
+    vim [opções] [arquivo]
+    São algumas das opções deste aplicativo
+    -b : permite editar arquivo binário.
+
+    -h : exibe opções do aplicativo.
+
+    +n : inicializa o cursor na n-ésima linha.
+
+    -r : recupera a última versão do arquivo (o arquivo estava sendo editado quando o vim foi encerrado de forma não normal, por exemplo, devido a falta de energia elétrica).
+
+    -R : abre arquivo apenas para leitura.
+
+    Observações
+    O vim (VI Improvement) é uma melhoria do antigo editor de texto vi. Este por sua vez é uma melhoria do editor de texto orientado a linha chamado ed. Existe também uma versão do vim para ambiente X chamada gvim.
+
+    O vim possui três formas de trabalho: modo de linha, modo de edição e modo de comandos. A mudança de um modo para outro modo é feita através do uso da tecla Esc.
+
+    Após o arquivo ser aberto pelo vim, o modo de comandos é ativado. No modo de comandos, as teclas digitadas pelo usuário são interpretadas pelo vim como ações a serem executadas dentro do arquivo aberto. No modo de edição, as teclas digitadas pelo usuário são ecoadas na tela. Para entrar neste modo, pode-se digitar, por exemplo, "a" (adicionar), "i" (incluir),etc. No modo de linha, o usuário define ações a serem executadas no arquivo como um todo (por exemplo, salvar, substituir caracteres, sair do aplicativo, etc). Para entrar neste modo, deve-se digitar ":".
+    São alguns dos comandos do vim no modo de comandos
+    0 : mover o cursor para o início da linha em que o cursor está posicionado.
+
+    a : inserir texto após a posição atual do cursor.
+
+    A : inserir texto no final da linha atual.
+
+    dd : deletar linha atual.
+
+    [n]+dd : deletar n linhas a partir da linha atual.
+
+    G : ir para o fim do arquivo.
+
+    [n]+G : ir para a n-ésima linha do arquivo.
+
+    h : voltar um caractere.
+
+    H : ir para a primeira linha exibida na tela atual.
+
+    i : inserir texto a partir da posição atual do cursor.
+
+    I : inserir texto no início da linha atual.
+
+    j : descer uma linha.
+
+    J : juntar a linha atual com a linha seguinte.
+
+    [n]+J : juntar n linhas consecutivas a partir da linha atual.
+
+    k : subir uma linha.
+
+    l : avançar um caractere.
+
+    L : ir para a última linha exibida na tela atual.
+
+    n : procurar, a partir da posição atual do cursor, a próxima ocorrência do texto definido no último comando /.
+
+    N : procurar, a partir da posição atual do cursor e indo em direção ao início do arquivo, a próxima ocorrência do texto definido no último comando /.
+
+    o : inserir uma linha em branco após a linha atual.
+
+    O : inserir uma linha em branco acima da linha atual.
+
+    p : inserir linhas copiadas após a linha atual.
+
+    P : inserir linhas copiadas antes da linha atual.
+
+    r : substituir o caractere atual.
+
+    R : substituir um conjunto de caracteres.
+
+    s : deletar o caractere atual e inserir texto.
+
+    S : apagar linha e inserir novo texto na linha.
+
+    u : desfazer a última alteração feita no texto e ainda não desfeita.
+
+    U : desfazer a última alteração feita no texto.
+
+    x : apagar caractere onde o cursor está posicionado.
+
+    $ : mover o cursor para o fim da linha em que o cursor está posicionado.
+
+    [n]+y : copiar n linhas a partir da linha atual.
+
+    yy : copiar a linha atual.
+
+    [n]+Y : copiar n linhas a partir da linha atual.
+
+    YY : copiar a linha atual.
+
+    CTRL+B : voltar uma página.
+
+    CTRL+F : avançar uma página.
+
+    F1 : exibir tela de ajuda.
+
+    [n]+ENTER : ir para n linhas abaixo da linha atual.
+
+    [n]+. : repetir o último comando que alterou o texto n vezes a partir da posição atual do cursor.
+
+    [n]+~+ENTER : inverter a caixa (case) dos n caracteres seguintes ao cursor.
+
+    /texto : procurar pela primeira ocorrência do texto especificado a partir da posição atual do cursor.
+
+    São alguns dos comandos do vim no modo de linha
+    :r arquivo : incluir arquivo a partir da linha atual do cursor.
+
+    :q+ENTER : sair da tela de ajuda.
+
+    :q! : sair do vim sem salvar as alterações.
+
+    :w arquivo : salvar arquivo com o nome especificado.
+
+    :wq : sair do vim salvando as alterações.
+
+    :X : criptografa o arquivo.
+
+    :n = Ir para a linha “n”. Exemplo: Para ir para linha 10 do arquivo, :1
+
+    Busca
+
+    /palavra: Procura por "palavra" do início para o fim
+    ?palavra: Procura por "palavra" do fim para o início
+    /Mari[oa]: Procura por "Mario" ou "Maria"
+    /\<pal: Procura por expressões que começem com "pala" como, "palavra" ou "palíndromo"
+    /ismo\>: Procura por expressões que terminem com "ismo" como, "autismo"
+    /\<para\>: Procura pela palavra "para"
+    /\<...\>: Procura por todas as palavras com 3 letras
+    /maria\|joao: Procura por maria ou joao
+    /\<\d\d\d\d\>: Procura exatamente por 4 dígitos numéricos
+    /^\n\{3}: Procura por três linhas em branco
+    :bufdo /palavra/: Procura "palavra" em todos os arquivos abertos
+
+    Substituição
+
+    :%s/antigo/novo/g: Substitui todas as ocorrências de "antigo" por "novo" no arquivo
+    :%s/antigo/novo/gw: Substitui todas as ocorrências com confirmação
+    :2,35s/antigo/novo/g: Substitui todas as ocorrências entre as linhas 2 e 35
+    :5,$s/antigo/novo/g: Substitui todas as ocorrências da linha 5 até EOF (fim da linha)
+    :%s/^/legal/g: Substitui o começo de cada linha com "legal"
+    :%s/$/Oh/g: Substitui o fim de cada linha por "Oh"
+    :%s/antigo/novo/gi: Substitui "antigo" por "novo" desconsiderando maíusculas e/ou minúsculas
+    :%s/ *$//g: Apaga todos os espaços em branco
+    :g/palavra/d: Apaga todas as linhas contendo "palavra"
+    :v/palavra/d: Apaga todas as linhas que não contém "palavra"
+    :s/maria/joao/: Substitui a primeira ocorrência de "maria" por "joao" na linha corrente
+    :s/maria/joao/g: Substitui todas as ocorrências de "maria" por "joao" na linha corrente
+    :%s/maria/joao/g: Substitui "maria" por "joao" em todo o arquivo
+    :%s/\r//g: Apaga retornos de carro do windows (\n)
+    :%s/\r/\r/g: Transforma os retornos de carro do windows (\n) em retornos do Linux (\r)
+    :%s#<[^>]\+>##g: Apaga tags HTML mas mantêm o texto
+    :%s/^\(.*\)\n\1$/\1/: Apaga linhas repetidas
+    Ctrl+a: Incrementa o número sob o cursor
+    Ctrl+x: Decrementa o número sob o cursor
+    ggVGg?: Muda o texto usando Rot13
+
+    Minúsculo/Maiúsculo
+
+    Vu: Torna todos os caracteres da linha minúsculos
+    VU: Torna todos os caracteres da linha maiúsculos
+    g~~: Inverte os caracteres do texto inteiro
+    vEU: Coloca as letras da palavra em maiúsculas
+    vE~~: Inverte os caracteres da palavra selecionada
+    ggguG: Coloca todo o texto em minúsculas
+    :set ignorecase: Ignora minúsculos/maiúsculos nas buscas
+    :set smartcase: Ignora minúsculos/maiúsculos em buscas exceto quando uma letra msiúscula é usada
+    :%s/\<./\u&/g: Coloca a primeira letra de cada palavra em maiúscula
+    :%s/\<./\l&/g: Coloca a primeira letra de cada palavra em minúscula
+    :%s/.*/\u&: Coloca a primeira letra de cada linha em maiúscula
+    :%s/.*/\l&: Coloca a primeira letra de cada linha em minúscula
+
+    Lendo/Gravando arquivos
+
+    :1,10 w arquivo: Salva as linhas de 1 a 10 em "arquivo"
+    :1,10 w >> arquivo: Adiciona as linhas de 1 a 10 em "Arquivo"
+    :r arquivo: Insere o conteúdo de "arquivo" no atual
+    :23r arquivo: Insere o conteúdo de "arquivo" a partir da linha 23
+
+    Explorando arquivos
+
+    :e .: Abre o gerenciador de arquivos integrado do Vim
+    :Sex: Divide a janela e abre o gerenciador de arquivos integrado
+    :browse e: Abre o gerenciador de arquivos integrado na janela corrente
+    :ls: Lista os buffers carregados
+    :cd ..: Move para a pasta superior
+    :args: Lista os arquivos
+    :args *.php: Abre lista de arquivos
+    :grep expressao *.php: retorna uma lista de arquivos .php que contenham a expressão informada
+    gf: Abre o arquivo sob o cursor
+
+    Interação com o Linux
+
+    :!pwd: Executa o comando "pwd" e retorna para o Vim
+    !!pwd: Executa o comando "pwd" e insere a saída no buffer
+    :sh: Retorna temporariamente para o shell
+    exit: Retorna para o Vim
+
+    Alinhamento
+
+    :%!fmt: Alinha todas as linhas
+    !}fmt: Alinha todas as linhas a partir da posição corrente
+    5!!fmt: Alinha as próximas 5 linhas
+
+    Abas
+
+    :tabnew: Cria uma nova aba
+    gt: Mostra a próxima aba
+    :tabfirst: Mostra a primeira aba
+    :tablast: Mostra a última aba
+    :tabm n(posicao): Reorganiza as abas
+    :tabdo %s/foo/bar/g: Executa um comando em todas as abas
+    :tab ball: Coloca todos os arquivos abertos em abas
+
+    Divisão da janela do Vim
+
+    :e arquivo: Edita "arquivo" na janela corrente
+    :split arquivo: Divide a janela e abre "arquivo"
+    ctrl-w "seta para cima": Coloca o cursor na janela do topo
+    ctrl-w ctrl-w: Coloca o cursor na próxima janela
+    ctrl-w_: Maximiza a janela corrente
+    ctrl-w=: Coloca todas as janelas com o mesmo tamanho
+    10 ctrl-w+: Adiciona 10 linhas de tamanho na janela corrente
+    :vsplit arquivo: Divide a janela verticalmente
+    :sview arquivo: O mesmo que split, mas em modo somente-leitura
+    :hide: Fecha a janela corrente
+    :only: Fecha todas as janelas, exceto a janela atual
+    :b 2: Abre #2 na janela corrente
+
+    Auto-completion do texto
+
+    Ctrl+n Ctrl+p (em modo de inserção): Completa palavra
+    Ctrl+x Ctrl+l: Completa linha
+    :set dictionary=dict: Define dict como o dicionário atual
+    Ctrl+x Ctrl+k: Completa usando o dicionário
+
+    Marcações
+
+    mk: Marca a posição corrente como k
+    ‘k: Move o cursor para a marca k
+    d’k: Apaga tudo até a marca k
+
+    Abreviações
+
+    :ab email me@me.com: Define email como abreviação de me@me.com
+
+    Identação de Texto
+
+    :set autoindent: Liga a identação automática
+    :set smartindent: Liga a identação inteligente
+    :set shiftwidth=4: Define o tamanho da identação em 4 espaços
+    ctrl-t, ctrl-d: Identa/Deidenta no modo de inserção
+    >>: Identa
+    <<: Deidenta
+
+    Marcação de sintaxe
+
+    :syntax on: Liga a marcação de sintaxe
+    :syntax off: Desliga a marcação de sintaxe
+    :set syntax=perl: Força a usar a marcação de sintaxe do perl
