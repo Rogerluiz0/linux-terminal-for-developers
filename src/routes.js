@@ -7,6 +7,6 @@ router.use( express.static( path.join( __dirname, '/../public' ) ) )
 
 router.get( '/', controller.renderHome )
 router.get( '/terminal', controller.renderTerminal )
-router.get( '/about-me', controller.renderAboutMe )
+router.get( '/about', controller.renderAbout )
 
 module.exports = router

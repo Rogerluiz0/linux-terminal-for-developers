@@ -7,6 +7,6 @@ app.use( express.static( path.join( __dirname, '/../public' ) ) )
 
 app.get( '/', routes )
 app.get( '/terminal', routes )
-app.get( '/about-me', routes )
+app.get( '/about', routes )
 
 module.exports = app

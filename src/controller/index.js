@@ -7,8 +7,8 @@ const controller = {
   renderTerminal(req, res) {
     res.sendFile( path.join(  __dirname + '/../../public/pages/terminal.html' ) )
   },
-  renderAboutMe(req, res) {
-    res.sendFile( path.join(  __dirname + '/../../public/pages/about-me.html' ) )
+  renderAbout(req, res) {
+    res.sendFile( path.join(  __dirname + '/../../public/pages/about.html' ) )
   }
 }
 

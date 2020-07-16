@@ -1,5 +1,5 @@
 @media (max-width: 850px) {
-  .container-personal .text {
+  .container-about .text {
     margin: 50px 50px;
   }
 }
@@ -15,14 +15,15 @@
     width: 70%;
   }
 
-  .container-personal .personal-image {
+  .container-about .image-about {
     width: 200px;
     height: 200px;
+      background-size: 190px;
   }
 }
 
 @media (max-width: 460px) {
-  .container-personal .text {
+  .container-about .text {
     margin: 50px 15px;
   }
 }
