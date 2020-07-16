@@ -48,6 +48,7 @@ Na criação do layout desse projeto foi usado Cascading Style Sheets ( css ) pu
 - [ ] Trabalhar a responsividade e adaptação para diferentes tamanhos de tela.
 - [ ] Adicionar mais conteúdo.
 - [ ] Manter o conteúdo atualizado.
+- [ ] Adicionar outros idiomas.
 
 ## 📂 Estrutura de diretórios
 
