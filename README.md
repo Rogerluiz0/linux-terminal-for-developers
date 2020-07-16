@@ -13,7 +13,7 @@
 
 <div align="center">
   <h2 align="center">Mobile</h2>
-  <img src=".github/exemplo-personal-mobile.svg" alt="Exemplo da interface no mobile" height="600px;">  
+  <img src=".github/exemplo-mobile.svg" alt="Exemplo da interface no mobile" height="600px;">  
 </div>
 
 ## ⚙️ Requisítos
