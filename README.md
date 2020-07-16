@@ -49,7 +49,6 @@ Na criação do layout desse projeto foi usado Cascading Style Sheets ( css ) pu
 node_modules/
 public/
   assets/
-  images/
   pages/
   scripts/
   styles/

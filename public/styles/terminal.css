@@ -1,5 +1,5 @@
 .container-main {
-  border: 1px solid #F00;
+  /*border: 1px solid #F00;*/
   --padding-container: 70px;
   padding: var(--padding-container);
   text-align: justify;

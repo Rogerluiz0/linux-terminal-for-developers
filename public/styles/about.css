@@ -1,0 +1,22 @@
+.container-about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-about .image-about {
+  width: 260px;
+  height: 260px;
+  border: none;
+  background-image: url(/../assets/project-page-about.svg);
+  background-repeat: no-repeat;
+  background-size: 250px;
+  margin: 20px;
+}
+
+.container-about .text {
+  text-align: center;
+  margin: 50px 200px;
+}
