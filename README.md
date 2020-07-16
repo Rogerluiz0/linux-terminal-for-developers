@@ -42,6 +42,13 @@ Esse projeto está recebendo updates ( correções ortográficas, correção de 
 
 Na criação do layout desse projeto foi usado Cascading Style Sheets ( css ) puro.
 
+## 📑 Ideias de implementação
+
+- [ ] Correções ortográficas e gramaticais.
+- [ ] Trabalhar a responsividade e adaptação para diferentes tamanhos de tela.
+- [ ] Adicionar mais conteúdo.
+- [ ] Manter o conteúdo atualizado.
+
 ## 📂 Estrutura de diretórios
 
 ```
