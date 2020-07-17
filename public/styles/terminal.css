@@ -1,5 +1,4 @@
 .container-main {
-  /*border: 1px solid #F00;*/
   --padding-container: 70px;
   padding: var(--padding-container);
   text-align: justify;
@@ -9,8 +8,12 @@ ul, ol {
   margin-left: calc(var(--padding-container) - 50px);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
   margin-top: 40px;
   margin-bottom: 40px;
+  color: var(--color-white);
 }
