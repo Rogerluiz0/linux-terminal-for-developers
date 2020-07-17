@@ -4,6 +4,12 @@
   }
 }
 
+@media (max-width: 656px) {
+  .navegation {
+    width: 65%;
+  }
+}
+
 @media (max-width: 600px) {
   .navegation {
     width: 60%;
@@ -15,6 +21,19 @@
     width: 70%;
   }
 
+  .container-main {
+    --padding-container: 50px;
+    padding: var(--padding-container);
+  }
+
+  ul, ol {
+    margin-left: calc(var(--padding-container) - 30px);
+  }
+
+  .container-main h1 {
+    font-size: 25px;
+  }
+
   .container-about .image-about {
     width: 200px;
     height: 200px;
@@ -23,12 +42,55 @@
 }
 
 @media (max-width: 460px) {
+  .container-main {
+    --padding-container: 40px;
+    padding: var(--padding-container);
+  }
+
+  ul, ol {
+    margin-left: calc(var(--padding-container) - 20px);
+  }
+
   .container-about .text {
     margin: 50px 15px;
   }
 }
 
+@media (max-width: 412px) {
+  .container-main h1 {
+    font-size: 20px;
+  }
+
+  .container-main h2 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 318px) {
+  .container-main {
+    --padding-container: 30px;
+    padding: var(--padding-container);
+  }
+
+  ul, ol {
+    margin-left: calc(var(--padding-container) - 10px);
+  }
+
+  .navegation {
+    width: 80%;
+  }
+}
+
 @media (max-width: 300px) {
+  .container-main {
+    --padding-container: 25px;
+    padding: var(--padding-container);
+  }
+
+  ul, ol {
+    margin-left: calc(var(--padding-container) - 15px);
+  }
+
   .navegation {
     width: 85%;
   }
