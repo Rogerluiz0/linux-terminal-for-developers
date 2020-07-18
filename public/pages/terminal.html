@@ -10,7 +10,7 @@
     <meta name="robot" content="index">
     <meta name="generator" content="Sublime Text 3">
     <meta name="author" content="Roger Luiz">
-    
+
     <title>Terminal</title>
 
     <link rel="stylesheet" href="/../styles/main.css">
@@ -115,13 +115,13 @@
         <li>cd /diretorio = Partindo da raiz até o último diretório passado como referência.</li>
         <li>cd diretorio = Parte do local corrente até o diretório passado como referência.</li>
       </ul>
-      
+
       <h2>comando pwd</h2>
-      
+
       <ul>
         <li>pwd = Exibe o caminho de diretório atual.</li>
       </ul>
-      
+
       <h2>comando mkdir</h2>
 
       <p>O comando mkdir é usado para criar pastas</p>
@@ -133,13 +133,13 @@
       </ul>
 
       <h2>comando du</h2>
-      
+
       <ul>
         <li>du = Exibe o tamanho de um diretório e todos os seus subdiretórios.</li>
       </ul>
-      
+
       <h2>comando touch</h2>
-      
+
       <p>O comando touch é usado para criar arquivos.</p>
       <p>touch [opções] [arquivo]</p>
 
@@ -154,7 +154,7 @@
       <p>Obs: podemos gerar nomes automáticos usando as chaves {} desta maneira: touch exemplo{1..3}.txt, este comando irá criar 3 arquivos chamados exemplo1.txt, exemplo2.txt e exemplo3.txt.</p>
 
       <h2>comando rm</h2>
-      
+
       <p>O comando rm é usado para excluir arquivos.</p>
       <p>rm [opções] [arquivo]</p>
 
@@ -168,7 +168,7 @@
       </ul>
 
       <h2>comando cp</h2>
-      
+
       <p>O comando cp é usado para copiar arquivos.</p>
       <p>cp [opções] [arquivo] [destino]</p>
 
@@ -181,7 +181,7 @@
       </ul>
 
       <h2>comando mv</h2>
-      
+
       <p>O comando mv é usado para mover arquivos.</p>
       <p>mv [opções] [arquivo] [destino].</p>
 
@@ -195,7 +195,7 @@
       <p>O comando mv também é usado para renomear arquivos.</p>
 
       <ul>
-        <li>mv nomeOriginal novoNome</li>
+        <li>mv [nomeAtual] [novoNome]</li>
       </ul>
 
       <h2>Visualização de arquivos</h2>  
@@ -205,7 +205,7 @@
         <li>less [arquivo] = Exibi o conteúdo de um arquivo páginado.</li>
         <li>tac [arquivo] = Exibi o conteúdo de um arquivo de trás pra frente (da última linha pra primeira).</li>
       </ul>  
-      
+
       <p>cat [opção] [arquivo]</p>
 
       <ul>
@@ -223,7 +223,7 @@
       </ul>
 
       <h2>Processos</h2>
-      
+
       <ul>
         <li>top = Exibe os processos usando a maioria dos recursos do sistema, a qualquer momento. "Q" pode ser usado para sair.</li>
         <li>htop = O comando HTOP é uma evolução do comando TOP. As informações são semelhantes às produzidas pelo comando TOP, mas apresentadas num interface mais intuitivo e colorido.</li>
@@ -231,7 +231,7 @@
         <li>killall Discord = Mata todos os processo com o nome discord.</li>
         <li>pkill fire - Mata todos os processo que tenha "fire" em seu nome.</li>
       </ul>
-      
+
       <p>ps [opções]</p>
       <ul>
         <li>ps = O comando ps exibe informações sobre os processos que estão executando na máquina.</li>
@@ -253,7 +253,7 @@
         <li>sudo su =  Entra no modo usuário root.</li>
         <li>exit  =  Sai do usuário root.</li>
       </ul>
-      
+
       <p>Observação: Quando você for digitar sua senha para entrar no modo usuário root, por questões de segurança o terminal não exibe nada na tela o que foi digitado.</p>
 
       <p>uname [opções]</p>
@@ -271,13 +271,13 @@
       </ul>
 
       <h2>Memória</h2>
-      
+
       <ul>
         <li>free = Este comando exibe a quantidade de espaço livre disponível no sistema.</li>
       </ul>
 
       <p>df [opções]</p>
-      
+
       <ul>  
         <li>df = Exibe informações sobre o uso do espaço em disco de todos os sistemas de arquivos montados.</li>
         <li>df -a = Inclui sistema de arquivos com 0 (zero) blocos.</li>
@@ -291,12 +291,12 @@
       <h2>comando apt</h2>
 
       <ul>
-        <li>sudo apt-get update = baixa os pacotes disponíveis.</li>
-        <li>sudo apt-get upgrade = atualiza os pacotes do sistema.</li>
-        <li>sudo apt-get clean = remover cache de pacotes.</li>
-        <li>sudo apt-get cache [busca] = busca um pacote.</li>
-        <li>sudo apt-get install [pacote] = instala um pacote.</li>
-        <li>sudo apt-get remove [pacote] --purge = remove pacotes e configs.</li>
+        <li>sudo apt-get update = Baixa os pacotes disponíveis.</li>
+        <li>sudo apt-get upgrade = Atualiza os pacotes do sistema.</li>
+        <li>sudo apt-get clean = Remove cache de programas.</li>
+        <li>sudo apt-get cache [busca] = Busca um programa.</li>
+        <li>sudo apt-get install [programa] = Instala um programa.</li>
+        <li>sudo apt-get remove [pacote] --purge = Remove programas e configs.</li>
       </ul>
 
       <h2>Compressão</h2>
@@ -313,7 +313,7 @@
       </ul>
 
       <h2>Histórico de comandos</h2>
-      
+
       <ul>
         <li>history = Lista o histórico de 2000 comandos digitados.</li>
         <li>Seta para cima e seta para baixo = Últimos comandos digitados.</li>
@@ -341,7 +341,7 @@
       <h2>Comando find</h2>
 
       <p>O comando find é usado para busca de arquivos.</p>
-      
+
       <ul>
         <li>find . = Lista todos os arquivos contidos em um diretório e subdiretórios.</li>
         <li>find . -name [arquivo] = Busca um arquivo com um nome especifico.</li>
@@ -351,7 +351,7 @@
       <h1>Usuários</h1>
 
       <h2>Comando passwd</h2>
-      
+
       <p>O passwd é um comando utilizado para configurar ou trocar a senha das contas dos usuários do sistema. É necessário possuir privilégios administrativos para executá-lo, mas um usuário comum consegue alterar sua própria senha.</p>
 
       <p>passwd [opções] [usuários]</p>
@@ -394,7 +394,7 @@
       <h3>Adicionar usuários</h3>
 
       <p>Criar um usuário novo no Linux é bem simples, apenas é necessário o comando useradd e indicar o nome do novo usuário.</p>
-      
+
       <p>useradd [opções] [nomeusuario]</p>
 
       <ul>
@@ -420,15 +420,36 @@
       </ul>
 
       <h3>Remover usuários</h3>
-      
+
       <p>Para removermos um usuário utilizamos o comando userdel.</p>
-      
+
       <p>userdel [opções] [nomeusuario]</p>
-      
+
       <ul>
         <li>userdel -h [nomeusuario] = Exibe as opções do comando.</li>
         <li>userdel -r [nomeusuario] = Deleta a home e todos os seus arquivos.</li>
       </ul>
+
+      <h2>Git</h2>
+
+      <p>Um breve resumo dos comando do git:</p>
+
+      <ul>
+        <li>git init = Cria um repositório Git vazio ou reinicialize um existente.</li>
+        <li>git add = Adiciona ou atualiza mudanças para irem para o repositório.</li>
+        <li>git commit = Registra alterações no repositório.</li>
+        <li>git log = Mostra os pontos na "linha do tempo" do repositório ( commit ).</li>
+        <li>git status = Informa o estado das alterações do nosso projeto.</li>
+        <li>git show = Apresenta determinado ponto na " história " do nosso projeto.</li>
+        <li>git branch = Lista, cria ou exclui ramificações.</li>
+        <li>git checkout = Alterna ramificações ou restaura arquivos da árvore de trabalho.</li>
+        <li>git merge = Une dois ou mais históricos de desenvolvimento.</li>
+        <li>git push = Envia alterações locais para o repositório remoto.</li>
+        <li>git clone = clonar um projeto / repositório.</li>
+        <li>git pull = Puxa do repositório remoto.</li>
+      </ul>
+
+      <p>Observação: para você poder usar comandos do git na sua linha de comando você precisa ter o git instalado na sua máquina.</p>
 
       <h1>vim</h1>
 
@@ -646,7 +667,7 @@
       </ul>
 
       <h4>Abreviações</h4>
-      
+
       <ul>
         <li>:ab email me@me.com: Define email como abreviação de me@me.com.</li>
       </ul>
