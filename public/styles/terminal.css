@@ -21,8 +21,8 @@ h1, h2, h3, h4, h5, h6 {
 #Fim {
   position: fixed;
   z-index: 999999;
-  bottom: 0;
-  right: 0;
+  bottom: 15px;
+  right: 15px;
   display: flex;
   justify-content: center;
   align-self: center;
