@@ -18,8 +18,8 @@
 
 ## ⚙️ Requisítos
 
-- [ ] [Node.js](https://nodejs.org/en/)
-- [ ] [GIT](https://git-scm.com/)
+- [ ] [Node.js](https://nodejs.org/en/) ( Obrigatório )
+- [ ] [GIT](https://git-scm.com/) ( Opcional )
 
 ## 🚀 Tecnologias
 
