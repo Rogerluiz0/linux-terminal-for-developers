@@ -1,14 +1,14 @@
 const path = require( 'path' )
 
 const controller = {
-  renderHome(req, res) {
-    res.render( path.join(  __dirname + '/../../public/index.html' ) )
+  renderHome( request, response ) {
+    response.render( path.join(  __dirname + '/../../public/index.html' ) )
   },
-  renderTerminal(req, res) {
-    res.sendFile( path.join(  __dirname + '/../../public/pages/terminal.html' ) )
+  renderTerminal( request, response ) {
+    response.sendFile( path.join(  __dirname + '/../../public/pages/terminal.html' ) )
   },
-  renderAbout(req, res) {
-    res.sendFile( path.join(  __dirname + '/../../public/pages/about.html' ) )
+  renderAbout( request, response ) {
+    response.sendFile( path.join(  __dirname + '/../../public/pages/about.html' ) )
   }
 }
 

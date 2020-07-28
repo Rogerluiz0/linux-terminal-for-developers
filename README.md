@@ -27,8 +27,6 @@
 - [x] [Express.js](https://expressjs.com/)
 - [x] [Nodemon](https://nodemon.io/)
 - [x] [dotenv](https://www.npmjs.com/package/dotenv)
-- [x] [module-alias](https://www.npmjs.com/package/module-alias)
-
 
 ## 💻 Projeto
 
@@ -40,7 +38,8 @@ Esse projeto está recebendo updates ( correções ortográficas, correção de 
 
 ## 🔖 Layout
 
-Na criação do layout desse projeto foi usado Cascading Style Sheets ( css ) puro.
+Para criar o Layout deste projeto eu usei Cascading Style Sheets ( css ) puro pois queria um layout exclusivo.
+Você pode vosualizar o layout da aplicação [aqui.](https://bit.ly/bash-for-developers)
 
 ## 📑 Ideias de implementação
 
@@ -68,21 +67,21 @@ src/
     index.js
   app.js
   routes.js
+  server.js
 .env
 .gitignore
 LICENSE.md
-package.json
 package-lock.json
+package.json
 README.md
-server.js    
 ```
 
 ## ⬇️ Instalação
 
 - `git clone https://github.com/Rogerluiz0/linux-terminal-for-developers.git`;
 - `cd linux-terminal-for-developers`;
-- `npm install ou yarn install`;
-- `npm start ou yarn start`.
+- `npm install`;
+- `npm run dev`.
 
 ## 🤔 Como contribuir
 

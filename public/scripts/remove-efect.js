@@ -1,4 +1,4 @@
-window.addEventListener( 'load' , () => {
+window.addEventListener( 'load' , () => { 
 
   if ( screen.width <= 900 ) {
     document.querySelectorAll( 'span' )[0].removeAttribute( 'class' )

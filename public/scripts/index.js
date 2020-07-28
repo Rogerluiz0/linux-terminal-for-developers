@@ -1,5 +1,5 @@
 window.addEventListener( 'load' , () => {
- 
+  
  const postWrap = document.querySelector( '.container-main' )
  const bar = document.createElement( 'div' )
 

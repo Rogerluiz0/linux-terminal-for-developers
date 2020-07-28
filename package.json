@@ -1,32 +1,29 @@
 {
   "name": "linux-terminal-for-developers",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Website for linux terminal studies",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rogerluiz0/linux-terminal-for-developers.git"
   },
   "keywords": [],
-  "author": "Roger Luiz",
+  "author": {
+    "name": "Roger Luiz",
+    "email": "Rogerluiz009@gmail.com",
+    "url": "https://github.com/Rogerluiz0"
+  },
   "license": "MIT",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "module-alias": "^2.2.2"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  },
-  "_moduleAliases": {
-    "@": "src",
-    "@app": "src/app.js",
-    "@public": "public",
-    "@config": "src/config",
-    "@controller": "src/controller"
   }
 }
