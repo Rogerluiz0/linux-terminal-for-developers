@@ -1,4 +1,4 @@
-.container-main {
+.container-main { 
   --padding-container: 70px;
   padding: var(--padding-container);
   text-align: justify;
