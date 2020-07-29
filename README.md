@@ -55,7 +55,6 @@ Você pode vosualizar o layout da aplicação [aqui.](https://bit.ly/bash-for-de
 
 ```
 .github/
-node_modules/
 public/
   assets/
   pages/
