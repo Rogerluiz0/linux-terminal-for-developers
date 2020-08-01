@@ -6,7 +6,7 @@
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=5568f9&labelColor=111116">
 </p>
 
-# 📷 Screenshots
+# :camera_flash: Screenshots
 
 <div align="center">
   <h2 align="center">Desktop</h2>
@@ -18,32 +18,32 @@
   <img src=".github/exemplo-mobile.svg" alt="Exemplo da interface no mobile" height="600px;">  
 </div>
 
-## ⚙️ Requisítos
+## :gear: Requisítos
 
 - [ ] [Node.js](https://nodejs.org/en/) ( Obrigatório )
 - [ ] [GIT](https://git-scm.com/) ( Opcional )
 
-## 🚀 Tecnologias
+## :rocket: Tecnologias
 
 - [x] [Node.js](https://nodejs.org/en/)
 - [x] [Express.js](https://expressjs.com/)
 - [x] [Nodemon](https://nodemon.io/)
 - [x] [dotenv](https://www.npmjs.com/package/dotenv)
 
-## 💻 Projeto
+## :computer: Projeto
 
 Essse projeto é uma aplicação web com o intuito de trazer um material sobre terminal linux com boa qualidade, com um front-end simples e um back-end com o node.js e o express.js.
 
-## 🏁 Updates
+## :checkered_flag: Updates
 
 Esse projeto está recebendo updates ( correções ortográficas, correção de bugs, melhorias no layout, refatorações no código fonte, atualização do conteúdo e etc ) constantemente.
 
-## 🔖 Layout
+## :bookmark: Layout
 
 Para criar o Layout deste projeto eu usei Cascading Style Sheets ( css ) puro pois queria um layout exclusivo.
 Você pode vosualizar o layout da aplicação [aqui.](https://bit.ly/bash-for-developers)
 
-## 📑 Ideias de implementação
+## :bookmark_tabs: Ideias de implementação
 
 - [ ] Correções ortográficas e gramaticais.
 - [ ] Trabalhar a responsividade e adaptação para diferentes tamanhos de tela.
@@ -51,7 +51,7 @@ Você pode vosualizar o layout da aplicação [aqui.](https://bit.ly/bash-for-de
 - [ ] Manter o conteúdo atualizado.
 - [ ] Adicionar outros idiomas.
 
-## 📂 Estrutura de diretórios
+## :open_file_folder: Estrutura de diretórios
 
 ```
 .github/
@@ -72,19 +72,18 @@ src/
 .env
 .gitignore
 LICENSE.md
-package-lock.json
 package.json
 README.md
 ```
 
-## ⬇️ Instalação
+## :arrow_down: Instalação
 
 - `git clone https://github.com/Rogerluiz0/linux-terminal-for-developers.git`;
 - `cd linux-terminal-for-developers`;
 - `npm install`;
 - `npm run dev`.
 
-## 🤔 Como contribuir
+## :thinking: Como contribuir
 
 - Faça um fork desse repositório;
 - Cria uma branch com a sua feature: `git checkout -b minha-feature`;
