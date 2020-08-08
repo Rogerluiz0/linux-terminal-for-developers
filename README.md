@@ -18,73 +18,24 @@
   <img src=".github/exemplo-mobile.svg" alt="Exemplo da interface no mobile" height="600px;">  
 </div>
 
-## :gear: Requisítos
-
-- [ ] [Node.js](https://nodejs.org/en/) ( Obrigatório )
-- [ ] [GIT](https://git-scm.com/) ( Opcional )
-
-## :rocket: Tecnologias
-
-- [x] [Node.js](https://nodejs.org/en/)
-- [x] [Express.js](https://expressjs.com/)
-- [x] [Nodemon](https://nodemon.io/)
-- [x] [dotenv](https://www.npmjs.com/package/dotenv)
-
 ## :computer: Projeto
 
-Essse projeto é uma aplicação web com o intuito de trazer um material sobre terminal linux com boa qualidade, com um front-end simples e um back-end com o node.js e o express.js.
+Essse projeto é uma aplicação web com o intuito de trazer um material sobre terminal linux com boa qualidade, com um front-end simples.
 
 ## :checkered_flag: Updates
 
 Esse projeto está recebendo updates ( correções ortográficas, correção de bugs, melhorias no layout, refatorações no código fonte, atualização do conteúdo e etc ) constantemente.
 
-## :bookmark: Layout
 
-Para criar o Layout deste projeto eu usei Cascading Style Sheets ( css ) puro pois queria um layout exclusivo.
-Você pode vosualizar o layout da aplicação [aqui.](https://bit.ly/bash-for-developers)
-
-## :bookmark_tabs: Ideias de implementação
-
+## :thinking: Como contribuir
+Primeiro passo: Você pode fazer as seguintes alterações:
 - [ ] Correções ortográficas e gramaticais.
 - [ ] Trabalhar a responsividade e adaptação para diferentes tamanhos de tela.
 - [ ] Adicionar mais conteúdo.
 - [ ] Manter o conteúdo atualizado.
 - [ ] Adicionar outros idiomas.
 
-## :open_file_folder: Estrutura de diretórios
-
-```
-.github/
-public/
-  assets/
-  pages/
-  scripts/
-  styles/
-  index.html
-src/
-  config/
-    index.js
-  controller/
-    index.js
-  app.js
-  routes.js
-  server.js
-.env
-.gitignore
-LICENSE.md
-package.json
-README.md
-```
-
-## :arrow_down: Instalação
-
-- `git clone https://github.com/Rogerluiz0/linux-terminal-for-developers.git`;
-- `cd linux-terminal-for-developers`;
-- `npm install`;
-- `npm run dev`.
-
-## :thinking: Como contribuir
-
+Segundo  passo:
 - Faça um fork desse repositório;
 - Cria uma branch com a sua feature: `git checkout -b minha-feature`;
 - Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
