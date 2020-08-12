@@ -1,4 +1,4 @@
-require( 'dotenv' ).config() 
+require( 'dotenv' ).config()
 
 const app = require( './app.js' )
 const config = require( './config/index.js' )
@@ -10,4 +10,4 @@ app.listen( PORT , ( err ) => {
     console.log( 'erro' )
   }
   console.log( `Server running on localhost:${PORT}` )
-} )  
+} )

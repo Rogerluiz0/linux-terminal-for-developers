@@ -7,16 +7,16 @@
 }
 
 .container-about .image-about {
-  width: 260px;
-  height: 260px;
+  width: 20rem;
+  height: 20rem;
   border: none;
-  background-image: url(/../assets/project-page-about.svg);
+  background-image: url(/../assets/help.svg);
   background-repeat: no-repeat;
-  background-size: 250px;
-  margin: 20px;
+  background-size: cover;
+  margin: 3rem 0rem;
 }
 
 .container-about .text {
-  text-align: center;
-  margin: 50px 200px;
+  margin: 2rem 3rem;
+  text-align: justify;
 }
