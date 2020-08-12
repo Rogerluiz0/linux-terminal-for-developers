@@ -1,11 +1,20 @@
+body {
+  line-height: 3.5rem;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .container-main { 
-  --padding-container: 70px;
+  --padding-container: 1.5rem;
   padding: var(--padding-container);
   text-align: justify;
 }
 
 ul, ol {
-  margin-left: calc(var(--padding-container) - 50px);
+  margin-left: 3rem;
 }
 
 h1 {
@@ -13,16 +22,16 @@ h1 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   color: var(--color-white);
 }
 
 #Fim {
   position: fixed;
   z-index: 999999;
-  bottom: 15px;
-  right: 15px;
+  bottom: 0.5rem;
+  right: 0.5rem;
   display: flex;
   justify-content: center;
   align-self: center;
@@ -30,7 +39,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #Fim img {
-  width: 38px;
-  height: 38px;
+  width: 4rem;
+  height: 4rem;
 }
-

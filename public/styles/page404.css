@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-not-found { 
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-not-found .image-not-found {
+  width: 20rem;
+  height: 20rem;
+  border: none;
+  background-image: url(../assets/not-found.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 7.5rem;
+}
+
+.container-not-found .text {
+  text-align: center;
+}

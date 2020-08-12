@@ -1,86 +1,62 @@
-:root { 
-  --color-gray: rgb(135, 134, 139);   /*Cinza*/ 
-  --color-black: rgb(17, 17, 22);     /*Preto*/  
-  --color-blue: rgb(85, 104, 249);    /*Azul*/
-  --color-white: rgb(240, 240, 245);  /*Gelo*/
+:root {
+  --color-background: #F0F0F7;
+  --color-primary: #8257E5;
+  --color-secondary: #04D361;
+  --color-text-title: #32264D;
+  --color-text-base: #6A6180;
+  font-size: 60%;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--color-gray);
-}
-
-html {
-  font-family: 'Roboto', sans-serif;
-  line-height: 30px;
 }
 
 html::-webkit-scrollbar {
-  width: 10px;
+  width: 13px;
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: var(--color-blue);
-  border-radius: 5px;
+  background-color: var(--color-secondary);
+  border-radius: 0.2rem;
+}
+
+html, body {
+  height: 100vh;
 }
 
 body {
-  background-color: var(--color-black);
-  overflow-x: hidden;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Ubunto', sans-serif;
+  background-color: var(--color-background);
+  font: 500 1.6rem Poppins;
+  color: var(--color-text-base);
 }
 
 a {
   text-decoration: none;
-  color: var(--color-blue);
+  color: var(--color-primary);
 }
 
-span {
-  color: var(--color-blue);
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-title);
 }
 
-img {
-  cursor: pointer;
-}
-
-.a-inline {
-  display: inline-block;
-}
-
-/*Link + svg*/
 .voltar-home {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 20px;
-}
-
-.voltar-home img {
-  width: 30px;
-  height: 30px;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .voltar-home a {
-  color: var(--color-blue);
-  margin-left: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/*Efeito hover nos links*/
-.efect::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-blue);
-  transition: width .5s;
-}
 
-.efect:hover::after {
-  width: 100%;
-  transition: width .5s;
+.voltar-home img {
+  width: 2.3rem;
+  height: 2.3rem;
 }
