@@ -68,10 +68,10 @@ projeto
 
 ## :arrow_down: Instalação
 
-- `git clone [repositório do projeto]`;
-- `cd [nome do projeto]`;
-- `npm install | yarn install`;
-- `npm start | yarn start`.
+- `git clone https://github.com/Rogerluiz0/linux-terminal-for-developers.git`;
+- `cd https://github.com/Rogerluiz0/linux-terminal-for-developers.git`;
+- `npm install`;
+- `npm run dev`.
 
 ## :thinking: Como contribuir
 
