@@ -69,7 +69,7 @@ projeto
 ## :arrow_down: Instalação
 
 - `git clone https://github.com/Rogerluiz0/linux-terminal-for-developers.git`;
-- `cd https://github.com/Rogerluiz0/linux-terminal-for-developers.git`;
+- `cd linux-terminal-for-developers`;
 - `npm install`;
 - `npm run dev`.
 
