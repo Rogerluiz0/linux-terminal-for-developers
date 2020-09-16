@@ -1,22 +1,6 @@
-<h1 align="center">
-  <img alt="Ícone do projeto" title="" src=".github/" width="" />
-</h1>
-
 <p align="center">
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=5568f9&labelColor=111116">
 </p>
-
-<h1 align="center">:camera_flash: Screenshots</h1>
-
-<div align="center">
-  <h2 align="center">Desktop</h2>
-  <img src=".github/" alt="Exemplo da interface no desktop" style="width: 100%;">
-</div>
-
-<div align="center">
-  <h2 align="center">Mobile</h2>
-  <img src=".github/" alt="Exemplo da interface no mobile" height="">
-</div>
 
 ## :gear: Requisítos para rodar de forma local
 
