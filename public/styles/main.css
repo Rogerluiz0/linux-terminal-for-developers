@@ -1,16 +1,17 @@
 :root {
-  --color-background: #F0F0F7;
-  --color-primary: #8257E5;
-  --color-secondary: #04D361;
-  --color-text-title: #32264D;
-  --color-text-base: #6A6180;
-  font-size: 60%;
+  --color-text-base-primary: #FFFFFF;
+  --color-primary-white: #F1F1F1;
+  --color-secondary-white: #C0C0C0;
+  --color-primary-black: #2D2D2D;
+  --color-secondary-black: #202024;
+  font-size: 62.5%;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /*border: 1px solid #F00;*/
 }
 
 html::-webkit-scrollbar {
@@ -18,7 +19,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary-white);
   border-radius: 0.2rem;
 }
 
@@ -27,36 +28,99 @@ html, body {
 }
 
 body {
-  background-color: var(--color-background);
+  background-color: var(--color-primary-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font: 500 1.6rem Poppins;
-  color: var(--color-text-base);
+}
+
+h1, h2, h3, h4, h5 ,h6, p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 a {
   text-decoration: none;
-  color: var(--color-primary);
+  color: #7159C1;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--color-text-title);
+span {
+  background-color: var(--color-secondary-white);
+  font-weight: bold;
+  border-radius: 0.8rem;
+  padding: 0.4rem;
+  font-size: 1.3rem;
 }
 
-.voltar-home {
+header {
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  margin-top: 0.5rem;
-  margin-right: 0.5rem;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.voltar-home a {
+header * {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  margin-top: 1rem;
+}
+
+main {
+  margin-top: 2000rem;
+}
+
+footer, main {
+  max-width: 70rem;
+}
+
+footer {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+main section#introduction blockquote {
+  border-left: 0.5rem solid var(--color-secondary-white);
+  padding: 1rem;
+}
+
+main #introduction a {
+  margin-top: 3rem;
+}
+
+#folders h2, #atalhos h2, #content h2, #content h3 {
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+#Fim {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-self: center;
+  flex-direction: column;
+  position: fixed;
+  z-index: 999999;
+  bottom: 0.5rem;
+  right: 0.5rem;
 }
 
+.button-dark-theme {
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #836FFF;
+  box-shadow: 0.3rem 0.3rem 0px 0px #7159C1;
+}
 
-.voltar-home img {
-  width: 2.3rem;
-  height: 2.3rem;
+.button-dark-theme:active{
+  position: relative;
+  box-shadow: 0px 0px 0px 0px #7159C1, inset 0.3rem 0.3rem 0px 0px #7159C1;
+  top: 0.3rem;
+  left: 0.3rem;
 }

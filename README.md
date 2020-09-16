@@ -1,23 +1,36 @@
 <h1 align="center">
-  <img alt="Ícone do projeto" title="Terminal" src=".github/favicon.png" width="100px" />
+  <img alt="Ícone do projeto" title="" src=".github/" width="" />
 </h1>
 
 <p align="center">
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=5568f9&labelColor=111116">
 </p>
 
-## :gear: Requisítos
+<h1 align="center">:camera_flash: Screenshots</h1>
 
-- [ ] [Node.js](https://nodejs.org/en/) ( Obrigatório )
-- [ ] [GIT](https://git-scm.com/) ( Opcional )
+<div align="center">
+  <h2 align="center">Desktop</h2>
+  <img src=".github/" alt="Exemplo da interface no desktop" style="width: 100%;">
+</div>
+
+<div align="center">
+  <h2 align="center">Mobile</h2>
+  <img src=".github/" alt="Exemplo da interface no mobile" height="">
+</div>
+
+## :gear: Requisítos para rodar de forma local
+
+- [X] [Node.js](https://nodejs.org/en/) ( Obrigatório )
+- [X] [NPM](https://www.npmjs.com/) ou [YARN](https://yarnpkg.com/) ( Obrigatório )
+- [X] [GIT](https://git-scm.com/) ( Opcional )
 
 ## :rocket: Tecnologias
 
 - [x] [Node.js](https://nodejs.org/en/)
 - [x] [Express.js](https://expressjs.com/)
 - [x] [Nodemon](https://nodemon.io/)
-- [x] [dotenv](https://www.npmjs.com/package/dotenv)
-- [x] [nunjucks](https://mozilla.github.io/nunjucks/)
+- [x] [Dotenv](https://www.npmjs.com/package/dotenv)
+- [x] [Nunjucks](https://mozilla.github.io/nunjucks/)
 
 ## :computer: Projeto
 
@@ -29,24 +42,25 @@ Esse projeto está recebendo updates ( correções ortográficas, correção de 
 
 ## :bookmark: Layout
 
-Você pode acessar esta aplicação [aqui]()
+Você pode acessar o site clicando [aqui](https://linux-terminal-for-developers.herokuapp.com/).
 
 ## :bookmark_tabs: Ideias de implementação
 
-- [ ] Correções ortográficas e gramaticais.
-- [ ] Trabalhar a responsividade e adaptação para diferentes tamanhos de tela.
-- [ ] Adicionar mais conteúdo.
-- [ ] Manter o conteúdo atualizado.
+- [ ] Refatoração;
+- [ ] Correções ortográficas e gramaticais;
+- [ ] Trabalhar a responsividade e adaptação para diferentes tamanhos de tela;
+- [ ] Adicionar mais conteúdo;
+- [ ] Manter o conteúdo atualizado;
 - [ ] Adicionar outros idiomas.
 
 ## :open_file_folder: Estrutura de diretórios
 
 ```
 projeto
-  |-- .github
+  |-- .github 
   |-- public
     |-- asests
-    |-- pages
+    |-- scripts
     |-- styles
     |-- index.html
   |-- src
@@ -54,7 +68,6 @@ projeto
       |-- index.js
     |-- controllers
       |-- index.js
-    |-- database
     |-- routes
       |-- routes.js
     |-- app.js
@@ -66,7 +79,7 @@ projeto
   |-- README.md
 ```
 
-## :arrow_down: Instalação
+## :arrow_down: Instalação Local
 
 - `git clone https://github.com/Rogerluiz0/linux-terminal-for-developers.git`;
 - `cd linux-terminal-for-developers`;

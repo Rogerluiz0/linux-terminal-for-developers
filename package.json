@@ -1,7 +1,7 @@
 {
   "name": "linux-terminal-for-developers",
-  "version": "3.0.0",
-  "description": "Website for linux terminal studies.",
+  "version": "4.0.0",
+  "description": "Site para ajudar nos primeiros passos com Bash.",
   "main": "src/server.js",
   "scripts": {
     "dev": "nodemon src/server.js",
@@ -13,7 +13,7 @@
   },
   "keywords": [],
   "author": {
-    "name": "Roger Luiz",
+    "name": "Roger luiz",
     "email": "Rogerluiz009@gmail.com",
     "url": "https://github.com/Rogerluiz0"
   },

@@ -1,11 +1,9 @@
 const router = require('express').Router()
 const controller = require('./../controllers/index.js')
 
-const { pageHome , pageTerminal , pageAbout , page404 } = controller
+const { pageHome , page404 } = controller
 
 router.get( '/' , pageHome )
-router.get( '/terminal' , pageTerminal )
-router.get( '/about' , pageAbout )
-router.get( '*' , page404 )
+router.get( '*' , page404 ) // Esta rota deve sempre ser a última!
 
 module.exports = router
