@@ -11,38 +11,529 @@
   <meta name="generator" content="Sublime Text 3">
   <meta name="author" content="Roger Luiz">
 
-  <title>Home</title>
+  <title>Bash For Devs</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/styles/main.css">
-  <link rel="stylesheet" href="/styles/index.css">
   <link rel="stylesheet" href="/styles/responsive.css">
+
+  <script src="/scripts/scrollEfect.js" type="text/javascript"></script>
+  <script src="/scripts/darkTheme.js" type="text/javascript"></script>
 
 </head>
 <body>
 
-  <main class="container">
+  <div id="container">
+    <a href="#Fim" id="Topo"></a>
 
-    <div class="icon">
-      <img src="/assets/rocket.svg" alt="Foguete" class="main-icon">
-    </div>
+    <header>
+      <p>Bash For Devs</p>
+      <input type="button" class="button-dark-theme" value="Dark Theme">
+    </header>
 
-    <div class="div-buttons">
+    <main>
+      <section id="introduction">
+        <h2>O que é o Bash?</h2>
+        <p>Segundo o wikipedia, o que seria o bash:</p>
+        <blockquote cite="https://pt.wikipedia.org/wiki/Bash">
+          <p>"Acrônimo para "Bourne-Again SHell", o Bash é uma evolução retro-compatível muito mais interativa do Bourne Shell (sh). Os shells Bourne permitem a execução de sequências de comandos inseridos diretamente na linha de comandos ("prompt") ou ainda lidos de arquivos de texto conhecidos como shell scripts. Neles se podem invocar comandos internos aos próprios shells (conhecidos como comandos "builtins") ou ainda arquivos binários ou scripts de terceiros arquivados nos dispositivos de armazenamento do sistema."</p>
+        </blockquote>
+        <p>Para mais detalher clique <a href="https://pt.wikipedia.org/wiki/Bash" target="_blank">aqui</a>.</p>
 
-      <a href="/terminal" class="button-primary">
-        <img src="/assets/command-line.svg" alt="Terminal">
-        Estudar
-      </a>
+        <p>Simplificando, Bash é uma linha de comando, e uma linha de comando é uma forma diferente de se usar um sistema operacional, uma forma sem interface gráfica. Esse 'artigo' tem como público alvo devs que tem pouco ou nem um conhecimento do terminal padrão do linux, o Bash.</p>
+      </section>
 
-      <a href="/about" class="button-primary">
-        <img src="assets/user.svg" alt="Sobre">
-        Sobre
-      </a>
+      <section id="atalhos">
+        <h2>Atalhos globais do Bash</h2>
+        <p><span>Ctrl + Shift + C</span> - Copiar.</p>
+        <p><span>Ctrl + Shift + V</span> - Colar.</p>
+        <p><span>Ctrl + C</span> - Cancela o comando atual em funcionamento.</p>
+        <p><span>Ctrl + Z</span> - Pausa o comando atual, retorna com "fg" em primeiro plano Linux ou "bg" em segundo plano.</p>
+        <p><span>Ctrl + D</span> - Faz o logout da sessão atual (similar ao comando "exit").</p>
+        <p><span>Ctrl + W</span> - Apaga uma palavra na linha atual.</p>
+        <p><span>Ctrl + U</span> - Apaga a linha inteira.</p>
+        <p><span>Ctrl + R</span> - Tecle para Exiber um comando recente.</p>
+        <p><span>!! </span>- Repete o último comando.</p>
+        <p><span>Ctrl + L</span> - Limpa a tela.</p>
+      </section>
 
-    </div>
+      <section id="folders">
+        <h2>Diretórios</h2>
+        <p>Antes de estudarmos os comandos propiamente dito é interessante você intender como funciona as pastas no Linux. Um breve resumo:</p>
+        <p><span>/</span> - É o diretório raiz, todos os demais diretórios estão abaixo dele.</p>
+        <p><span>/bin/</span> - Binários principais dos usuários.</p>
+        <p><span>/boot/</span> - Arquivos do sistema de Boot.</p>
+        <p><span>/dev/</span> - Arquivos de dispositivos.</p>
+        <p><span>/etc/</span> - Arquivos de configuração do sistema.</p>
+        <p><span>/home/</span> - Diretório dos usuários comuns do sistema.</p>
+        <p><span>/lib/</span> - Bibliotecas essenciais do sistema e os módulos do kernel.</p>
+        <p><span>/media/</span> - Diretório de montagem e dispositivos.</p>
+        <p><span>/mnt/</span> - Diretório de montagem de dispositivos - mesmo que "media".</p>
+        <p><span>/opt/</span> - Instalação de programas não oficiais da distribuição ou por conta do usuário.</p>
+        <p><span>/sbin/</span> - Armazena arquivos executáveis que representam comandos administrativos. Exemplo: shutdown</p>
+        <p><span>/srv/</span> - Diretório para dados de serviços fornecidos pelo sistema.</p>
+        <p><span>/tmp/</span> - Diretório para arquivos temporários.</p>
+        <p><span>/usr/</span> - Segunda hierarquia do sistema, onde ficam os usuários comuns do sistema e programas.</p>
+        <p><span>/var/</span> - Diretório com arquivos variáveis gerados pelos programas do sistema. Exemplo: logs, spool de impressoras, e-mail e cache.</p>
+        <p><span>/root/</span> - Diretório do usuário root - O usuário root tem o total poder sobre o sistema. Podendo instalar, desinstalar e configurar.</p>
+        <p><span>/proc/</span> - Diretório virtual controlado pelo Kernel com configuração total do sistema.</p>
+      </section>
 
-  </main>
+      <section id="content">
+        <h2>Ajuda</h2>
+        <p>Você pode consultar a documentação e o manual de uso dos comandos das seguintes maneiras:</p>
+        <p><span>[comando] --help</span> = Documentação do comando.</p>
+        <p><span>man [comando]</span> = Manual do comando.</p>
+        <p><span>info [comando]</span> = Semelhante ao man, mas geralmente fornece informações mais detalhadas ou precisas.</p>
+
+        <h2>Comando ls</h2>
+        <p>O comando ls é usado para listar o conteúdo de um diretório.</p>
+        <p><span>ls [opções]</span></p>
+        <p><span>ls</span> - Lista arquivos e diretórios.</p>
+        <p><span>ls -r</span> - Lista arquivos e diretórios em ordem reversa.</p>
+        <p><span>ls -a</span> - Lista todos os arquivos e diretórios, incluindo arquivos ocultos.</p>
+        <p><span>ls -l</span> - Formato longo, mostra permissões, número de links, propietário, grupo, tamanho, data de modificação e nome do arquivo.</p>
+        <p><span>ls -h</span> - Lista arquivos e diretórios com informações formatadas (* Tem que ser usado com o -l *).</p>
+        <p><span>ls -ls</span> - Lista arquivos e diretórios pelo tamanho, no caso começará pelo o arquivo de maior tamanho.</p>
+        <p><span>ls -R</span> - Lista os arquivos e pastas recursivamente da pasta selecionada.</p>
+        <p><span>ls -m</span> - Arquivos listados em sequência, separados por vírgula.</p>
+        <p><span>ls -n</span> - Semelhante ao -l, porém mostra UID E GID Em vez de nomes de proprietário e grupo.</p>
+        <p><span>ls -o</span> - Semelhante ao -l, porém não mostra o grupo do arquivo.</p>
+        <p><span>ls -p</span> - Mostra uma barra ( / ) na frente de nomes de diretórios.</p>
+        <p><span>ls -A</span> - Semelhante ao -a, mas não mostra o diretório corrente ( . ) ou o diretório acima ( .. ).</p>
+        <p><span>ls -i</span> - Mostra o número do inode de cada arquivo na primeira coluna.</p>
+
+        <h2>Comando cd</h2>
+        <p>O comando cd é usado para entrar em uma determinda pasta.</p>
+        <p><span>cd [destino]</span></p>
+        <p><span>cd .</span>ou <span>.</span> - Diretório atual.</p>
+        <p><span>cd ..</span> - Volta um diretório.</p>
+        <p><span>cd /</span> - Vai direto para o diretório raiz.</p>
+        <p><span>cd ~</span> - Vai direto para o diretório home.</p>
+        <p><span>cd -</span> - Nos retorna para o último diretório acessado.</p>
+        <p><span>cd /diretorio</span> - Partindo da raiz até o último diretório passado como referência.</p>
+        <p><span>cd diretorio</span> - Parte do local corrente até o diretório passado como referência.</p>
+
+        <h2>Comando pwd</h2>
+        <p><span>pwd</span> - Exibe o caminho de diretório atual.</p>
+
+        <h2>Comando mkdir</h2>
+        <p>O comando mkdir é usado para criar pastas</p>
+        <p><span>mkdir [nomeDaPasta]</span> - Cria uma pasta.</p>
+        <p><span>mkdir pasta1 pasta2 pasta3</span> - Cria três pastas, pasta1, pasta2 e pasta3.</p>
+        <p><span>mkdir -p A/B/C</span> - Cria a pasta A, dentro da pasta A cria a pasta B e dentro da pasta B cria a pasta C.</p>
+
+        <h2>Comando du</h2>
+        <p><span>du</span> - Exibe o tamanho de um diretório e todos os seus subdiretórios.</p>
+
+        <h2>Comando touch</h2>
+        <p>O comando touch é usado para criar arquivos.</p>
+        <p><span>touch [opções] [arquivo]</span></p>
+        <p><span>touch [arquivo]</span> - Cria uma arquivo.</p>
+        <p><span>touch -a [arquivo]</span> - Altera a hora de acesso do arquivo.</p>
+        <p><span>touch -m [arquivo]</span> - Altera a hora de modificação do arquivo.</p>
+        <p><span>touch -am [arquivo]</span> - Altera a hora de acesso e modificação do arquivo.</p>
+        <p><span>touch -c [arquivo]</span> - Altera a hora de acesso sem criar um novo arquivo.</p>
+        <p><strong>Observação</strong>: podemos gerar nomes automáticos usando as chaves {} desta maneira: <span>touch exemplo{1..3}.txt</span>, este comando irá criar 3 arquivos chamados exemplo1.txt, exemplo2.txt e exemplo3.txt.</p>
+
+        <h2>Comando rm</h2>
+        <p>O comando rm é usado para excluir arquivos.</p>
+        <p><span>rm [opções] [arquivo]</span></p>
+        <p><span>rm</span> - Exclui um arquivo.</p>
+        <p><span>rm -f</span> - Exclui arquivos forçadamente.</p>
+        <p><span>rm -r</span> - Exclui o diretório e os arquivos na direção recursiva, o diretório especificado junto com seu subdiretório e arquivos.</p>
+        <p><span>rm -d</span> ou - Remove somente diretórios vazios.</p>
+        <p><span>rm -i</span> - Pergunta se queremos remover o arquivo/diretório antes de excluir.</p>
+        <p><span>rm -rf</span> - (rm -r) + (rm -f) ( utilize esse comando com extrema atenção! ).</p>
+
+        <h2>Comando cp</h2>
+        <p>O comando cp é usado para copiar arquivos.</p>
+        <p><span>cp [opções] [arquivo] [destino]</span></p>
+        <p><span>cp -i [arquivo] [destino]</span> - Pergunta se desejamos sobrescrever um arquivo destino já existente.</p>
+        <p><span>cp -n [arquivo] [destino]</span> - Não sobrescreve um arquivo já existente.</p>
+        <p><span>cp -r [arquivo] [destino]</span> - Copia diretórios de forma recursiva.</p>
+        <p><span>cp -p [arquivo] [destino]</span> - Preserva as permissões originais do arquivo (proprietário, grupo, etc.).</p>
+        <p><span>cp -vr [origem] [destino]</span> - copiar diretorio recursivamente.</p>
+
+        <h2>Comando mv</h2>
+        <p>O comando mv é usado para mover arquivos.</p>
+        <p><span>mv [opções] [arquivo] [destino]</span></p>
+        <p><span>mv -b [arquivo] [destino]</span> - Cria um backup de cada arquivo destino existente.</p>
+        <p><span>mv -f [arquivo] [destino]</span> - Apaga destinos existente sem perguntar ao usuário.</p>
+        <p><span>mv -i [arquivo] [destino]</span> - Pergunta se desejamos sobrescrever o arquivo destino já existente.</p>
+        <p><span>mv -n [arquivo] [destino]</span> - Não sobrescrever um arquivo destino já existente.</p>
+        <p>O comando mv também é usado para renomear arquivos.</p>
+        <p><span>mv [nomeAtual.extenção] [novoNome.extenção]</span></p>
+
+        <h2>Visualização de arquivos</h2>
+        <p><span>more [arquivo]</span> - Mostra o conteúdo de um arquivo em partes.</p>
+        <p><span>less [arquivo]</span> - Exibi o conteúdo de um arquivo páginado.</p>
+        <p><span>tac [arquivo]</span> - Exibi o conteúdo de um arquivo de trás pra frente (da última linha pra primeira).</p>
+        <p><span>cat [opção] [arquivo]</span></p>
+        <p><span>cat</span> - Abre o arquivo em modo de visualização.</p>
+        <p><span>cat -E [arquivo]</span> - Marca o término de linha mostrando o caractere $ ao final de cada uma delas.</p>
+        <p><span>cat -n [arquivo]</span> - Mostra a quantidade de linas do arquivo.</p>
+        <p><span>cat -v [arquivo]</span> - Exibe caracteres não exibíveis.</p>
+        <p><span>cat -T [arquivo]</span> - Exibe tabulação mostradas como ^I.</p>
+        <p><span>cat -s [arquivo]</span> - Remove linhas repetidas em branco.</p>
+        <p><span>cat -b [arquivo]</span> - Numera as linhas que possuem algum conteúdo.</p>
+        <p><span>cat [arquivo] | grep [busca]</span> - Busca no arquivo (case sensitive).</p>
+        <p><span>cat [arquivo] | grep [busca] -i</span> - Busca no arquivo (case insensitive).</p>
+        <p><span>cat [arquivo] > [arquivo]</span> - Copia o conteúdo do arquivo para outro.</p>
+        <p><span>cat [arquivo] >> [arquivo]</span> - Adiciona o conteúdo do arquivo para outro.</p> 
+
+        <h2>Comando bc</h2>
+        <p><span>bc</span> - Abre uma calculadora do Bash</p>
+        <p><strong>Observação</strong>: Para sair bastas digitar 'quit'.</p>
+
+        <h2>Processos</h2>
+        <p><span>top</span> - Exibe os processos usando a maioria dos recursos do sistema, a qualquer momento. "Q" pode ser usado para sair.</p>
+        <p><span>htop</span> - O comando HTOP é uma evolução do comando TOP. As informações são semelhantes às produzidas pelo comando TOP, mas apresentadas num interface mais intuitivo e colorido.</p>
+        <p><span>kill pid</span> - Mata o processo com o id de processo pid.</p>
+        <p><span>killall Discord</span> - Mata todos os processo com o nome discord.</p>
+        <p><span>pkill fire</span> - Mata todos os processo que tenha "fire" em seu nome.</p>
+        <p><span>ps [opções]</span></p>
+        <p><span>ps</span> - O comando ps exibe informações sobre os processos que estão executando na máquina.</p>
+        <p><span>ps -a</span> - Mostra os processos de todos os usuários.</p>
+        <p><span>ps -A</span> ou <span>ps -e</span> - Mostra todos os processos.</p>
+        <p><span>ps -f</span> - Mostra a árvore de execução de comandos.</p>
+        <p><span>ps -g [grupo]</span> - Mostra os processos de um determinado grupo.</p>
+        <p><span>ps -x</span> - Mostra os processos que não foram iniciados no console.</p>
+        <p><span>ps -u</span> - Fornece o nome do usuário e a hora de início do processo.</p>
+        <p><span>ps -aux</span> - exibe todos os processos do sistema independente de terminal.</p>  
+
+        <h2>Informações do sistema</h2>
+        <p><span>whereis [programa]</span> - Exibe possíveis localizações de um determinado programa.</p>
+        <p><span>date</span> - Exibe a data e hora atual.</p>
+        <p><span>whoami</span> - Imprime o nome de usuário usado no momento em que foi digitado.</p>
+        <p><span>sudo su</span> - Entra no modo usuário root.</p>
+        <p><span>exit</span> - Sai do usuário logado no momento que o comando é executado.</p>
+        <p><strong>Observação</strong>: Quando você for digitar sua senha para entrar no modo usuário root, por questões de segurança o terminal não exibe nada na tela o que foi digitado.</p>
+        <p><span>uname [opções]</span></p>
+        <p><span>uname -a</span> ou <span>uname --all</span> imprime todas as informações, omitindo uname -p e uname -i se as informações forem desconhecidas.</p>
+        <p><span>uname -s</span> ou <span>uname --kernel-name</span> - Imprime o nome do kernel.</p>
+        <p><span>uname -n</span> ou <span>uname --nodename</span> - Imprime o nome do host do nó da rede.</p>
+        <p><span>uname -r</span> ou <span>uname --kernel-release</span> - Imprime a versão do kernel.</p>
+        <p><span>uname -v</span> ou <span>uname --kernel-version</span> - Imprime a versão do kernel.</p>
+        <p><span>uname -m</span> ou <span>uname --machine</span> - Imprime o nome do hardware da máquina.</p>
+        <p><span>uname -p</span> ou <span>uname --processor</span> - Imprime o tipo de processador ou ” desconhecido “.</p>
+        <p><span>uname -i</span> ou <span>uname --hardware-platform</span> - Imprime a plataforma de hardware, ou ” desconhecido “.</p>
+        <p><span>uname -o</span> ou <span>uname --operating-system</span> - Imprime o sistema operacional.</p>
+        <p><span>uname --version</span> - Exibe informações da versão.</p>
+
+        <h2>Memória</h2>
+        <p><span>free</span> - Este comando exibe a quantidade de espaço livre disponível no sistema.</p>
+        <p><span>df [opções]</span></p>
+        <p><span>df</span> - Exibe informações sobre o uso do espaço em disco de todos os sistemas de arquivos montados.</p>
+        <p><span>df -a</span> - Inclui sistema de arquivos com 0 (zero) blocos.</p>
+        <p><span>df -h</span> - Mostra o espaço livre/ocupado em MB, KB, GB em vez de bloco.</p>
+        <p><span>df -k</span> - Lista em Kbyts.</p>
+        <p><span>df -l</span> - Somente lista sistema de arquivos locais.</p>
+        <p><span>df -m</span> - Lista em Mbytes.</p>
+        <p><span>df -T</span> - Lista o tipo de sistema de arquivos de cada partição.</p>
+
+        <h2>Comando apt</h2>
+        <p><span>sudo apt-get update</span> - Baixa os pacotes disponíveis.</p>
+        <p><span>sudo apt-get upgrade</span> - Atualiza os pacotes do sistema.</p>
+        <p><span>sudo apt-get clean</span> - Remove cache de programas.</p>
+        <p><span>sudo apt-get cache [busca]</span> - Busca um programa.</p>
+        <p><span>sudo apt-get install [programa]</span> - Instala um programa.</p>
+        <p><span>sudo apt-get remove [pacote] --purge</span> - Remove programas e configs.</p>
+        <p><strong>Observação</strong>: Se você estiver logado como usuário root, não é necessário o uso do 'sudo' na frente dos comandos.</p>
+
+        <h2>Compressão de arquivos</h2>
+        <p><span>tar cf pacote.tar arqs</span> - Cria um pacote TAR (nomeado pacote.tar) com os arquivos especificados (substituir a variável arqs pelo nome do arquivo).</p>
+        <p><span>tar xf pacote.tar</span> - Extrai os arquivos de “pacote.tar” (substituir a variável pacote.tar pelo nome do arquivo).</p>
+        <p><span>tar czf pacote.tar.gz arqs</span> - Cria um pacote TAR (nomeado pacote.tar.gz) com compressão GZip.</p>
+        <p><span>tar xzf pacote.tar.gz</span> - Extrai um pacote TAR (nomeado pacote.tar.gz) com compressão GZip.</p>
+        <p><span>tar cjf pacote.tar.bz2</span> - Cria um pacote TAR (nomeado pacote.tar.bz2) com compressão BZip2.</p>
+        <p><span>tar xjf pacote.tar.bz2</span> - Extrai um pacote TAR (nomeado pacote.tar.gz) com compressão BZip2.</p>
+        <p><span>gzip arq</span> - Compacta um arquivo e o renomeia para arq.gz (substituir a variável arq pelo nome do arquivo).</p>
+        <p><span>gzip -d arq.gz</span> - Descompacta arq.gz para um arquivo (substituir a variável arq.gz pelo nome do arquivo).</p>
+
+        <h2>Histórico de comandos</h2>
+        <p><span>history</span> - Lista o histórico de 2000 comandos digitados.</p>
+        <p><span>Seta para cima e seta para baixo</span> - Últimos comandos digitados.</p>
+
+        <h2>Referência global</h2>
+        <p>Referências globais são recursos para especificar um ou mais arquivos ou diretórios de uma vez.
+        Vamos usar o comando 'ls' para os exemplos, mas pode ser usado qualquer outro comando.</p>
+        <p><span>ls /etc/*.conf</span> - Lista todos os arquivos que tem a extenção '.conf'.</p>
+        <p><span>ls /etc/*x*</span> - Lista todos os aquivos que em algum lugar do nome tem a lera 'x'.</p>
+        <p><span>ls /etc/f*</span> - Lista todos os aquivos que começa com a letra 'f'.</p>
+        <p><span>ls /etc/?as*</span> - Lista todos os arquivos que começa com uma letra qualquer, tem segundo caractere 'a', o terceiro 's' e qualquer caractere depois.</p>
+        <p><span>ls /etc/???a*</span> - Lista todos os arquivos que tem o quarto caractere 'a'.</p>
+        <p><span>ls /etc/f[a-t]*</span> - Lista todos os aqruivos que começa com a letra 'f', depois a segunda letra varia do 'a' ao 't' e depois qualquer caractere.</p>
+        <p><span>ls /etc/f[u,o]*</span> - Lista todos os aqruivos que começa com a letra 'f', depois a segunda letra é 'u' ou 'o' e depois qualquer caractere.</p>
+        <p><span>ls /etc/?[a,e,i,o,u]*</span> - Lista todos os aqruivos que começa com uma letra qualquer, depois a segunda letra é uma vogal e depois qualquer caractere.</p>
+        <p><span>ls /etc/?[a,e,i,o,u]???</span> - Lista todos os aqruivos que começa com uma letra qualquer, depois a segunda letra é uma vogal e depois tem mais 3 caracteres qualquer.</p>
+        <p><span>ls /etc/?{am,ul}*</span> - Lista todos os aqruivos que começa com uma letra qualquer, depois a segunda e a terceira letra é 'am' ou 'ul' e depois qualquer caractere.</p>
+        <p><span>ls /etc/*{ev,ux}</span> - Lista todos os aqruivos que termina com 'ev' ou 'ux'.</p>
+        <p><span>ls /etc/*.{conf,db}</span> - Lista todos os aqruivos que tem a extenção '.conf' ou '.db'.</p>
+
+        <h2>Comando find</h2>
+        <p>O comando find é usado para busca de arquivos.</p>
+        <p><span>find .</span> - Lista todos os arquivos contidos em um diretório e subdiretórios.</p>
+        <p><span>find . -name [arquivo]</span> - Busca um arquivo com um nome especifico.</p>
+        <p><span>find [diretório] -iname [arquivo]</span> - Procura ignorando case sensitive.</p>
+
+        <h2>Usuários</h2>
+        <h3>Comando passwd</h3>
+        <p>O passwd é um comando utilizado para configurar ou trocar a senha das contas dos usuários do sistema. É necessário possuir privilégios administrativos para executá-lo, mas um usuário comum consegue alterar sua própria senha.</p>
+        <p><span>passwd [opções] [usuários]</span></p>
+        <p><span>passwd -l</span> - Trava a senha do usuário, ficando impedido de se logar e não pode trocar a senha (não é desabilitado).</p>
+        <p><span>passwd -u</span> - Destrava a senha do usuário.</p>
+        <p><span>passwd -d</span> - Exclui a senha do usuário.</p>
+        <p><span>passwd -e</span> - Expira a senha do usuário, forçando-o a fornecer uma nova ao logar-se novamente.</p>
+        <p><span>passwd -x dias</span> - Expira a senha do usuário quando atingir o número de dias especificados.</p>
+        <p><span>passwd -n dias</span> - Define a quantidade mínima de dias que o usuário deverá esperar para trocar a senha.</p>
+        <p><span>passwd -w dias</span> - define a quantidade mínima de dias que o usuário receberá o aviso que a senha precisa ser alterada.</p>
+        <p><span>passwd -i</span> - Deixa o usuário inativo, caso a senha tenha expirado.</p>
+        <p><span>passwd -S</span> - Exibe o status da conta.</p>
+        <p><span>passwd -a</span> - Usada em conjunto com a opção -S mostra o status das contas de todos os usuários.</p>
+
+        <h2>Tipos de usuários</h2>
+
+        <h3>Usuários comuns</h3>
+        <p>São os usuários que podem se conectar no sistema. Geralmente, estes usuários possuem uma home e podem manipular arquivos quando tem as permissões para tal. Porém estes usuários geralmente não tem permissão para certos arquivos e diretórios na maquina e não podem executar muitas funções a nível de sistema.</p>
+        <p>Exemplo de um usuário comum: <strong>roger@AB4NT5S:~$</strong></p>
+
+        <h3>Usuários de sistema</h3>
+        <p>Diferente dos usuários comuns, estes usuários não se conectam no sistema. São contas usadas para tarefas específicas dentro do sistema que não são de propriedade de uma pessoa em particular.</p>
+
+        <h3>Root</h3>
+        <p>O usuário root, também chamado de superusuário, tem controle total sobre o sistema operacional. Ele pode acessar todos os arquivos e normalmente é o único que pode executar certos programas, como por exemplo o httpd.</p>
+        <p>Exemplo de um usuário root: <strong>root@AB4NT5S:~#</strong></p>
+        <p><strong>Observação</strong>: Não é recomendado que você use o terminal no modo root o tempo inteiro.</p>
+
+        <h3>Grupos</h3>
+        <p>Um grupo é um conjunto de um ou mais usuários. É interessante reunir vários usuários em um grupo para definir suas propriedades, como as permissões. Como o arquivo passwd nós temos um arquivo somente para armazenar detalhes sobre os grupos.</p>
+        <p>Esse arquivo esta localizado em: /etc/group.</p>
+
+        <h2>Gerenciamento de usuários</h2>
+        <h3>Adicionar usuários</h3>
+        <p>Criar um usuário novo no Linux é bem simples, apenas é necessário o comando <strong>useradd</strong> e indicar o nome do novo usuário.</p>
+        <p><span>useradd [opções] [nomeusuario]</span></p>
+        <p><span>useradd -d  [nomeusuario]</span> - Define o nome do diretório home do usuário (mas não o cria).</p>
+        <p><span>useradd -s  [nomeusuario]</span> - Define o shell padrão do usuário.</p>
+        <p><span>useradd -h  [nomeusuario]</span> - Exibe as opções do comando.</p>
+
+        <h3>Alterar usuários</h3>
+        <p>Para alterarmos uma conta de usuário basta apenas utilizarmos o comando <strong>usermod</strong>.</p>
+        <p><span>usermod [opções] [nomeusuário]</span></p>
+        <p><span>usermod -d diretório [-m]</span> - Cria uma nova home para o usuário. A opção -m move os arquivos da home atual do usuário para a nova.</p>
+        <p><span>usermod -e yyyy-mm-dd</span> - Altera a data de expiração da conta do usuário.</p>
+        <p><span>usermod -g grupo</span> - Altera o GID do grupo do usuário para o especificado.</p>
+        <p><span>usermod -G grupo[, grupo2, ...]</span> - Define o GID dos outros grupos que o usuário pertence.</p>
+        <p><span>usermod -l nome</span> - Altera o nome do usuário (ele não pode estar logado).</p>
+        <p><span>usermod -s shell</span> - Altera o shell do usuário.</p>
+        <p><span>usermod -u uid</span> - Altera o número de UID do usuário.</p>
+
+        <h3>Remover usuários</h3>
+        <p>Para removermos um usuário utilizamos o comando userdel.</p>
+        <p><span>userdel [opções] [nomeusuario]</span></p>
+        <p><span>userdel -h [nomeusuario]</span> - Exibe as opções do comando.</p>
+        <p><span>userdel -r [nomeusuario]</span> - Deleta a home e todos os seus arquivos.</p>
+
+        <h2>vim</h2>
+        <p>Eu escolhi o editor vim para este artigo, mas você pode  usar vários editores além do vim como o nano e o vi por exemplo.</p>
+        <p>O vim (VI Improvement) é uma melhoria do antigo editor de texto vi. Este por sua vez é uma melhoria do editor de texto orientado a linha chamado ed. Existe também uma versão do vim para ambiente X chamada gvim.</p>
+        <p>O vim possui três formas de trabalho: modo de linha, modo de edição e modo de comandos. A mudança de um modo para outro modo é feita através do uso da tecla Esc.</p>
+        <p>Após o arquivo ser aberto pelo vim, o modo de comandos é ativado. No modo de comandos, as teclas digitadas pelo usuário são interpretadas pelo vim como ações a serem executadas dentro do arquivo aberto. No modo de edição, as teclas digitadas pelo usuário são ecoadas na tela. Para entrar neste modo, pode-se digitar, por exemplo, "a" (adicionar), "i" (incluir), etc. No modo de linha, o usuário define ações a serem executadas no arquivo como um todo (por exemplo, salvar, substituir caracteres, sair do aplicativo, etc). Para entrar neste modo, deve-se digitar " : ".</p>
+
+        <p>vim [opções] [arquivo]</p>
+
+        <h3>São alguns dos comandos do vim no modo de comandos</h3>
+        <p><span>0</span> : Mover o cursor para o início da linha em que o cursor está posicionado.</p>
+        <p><span>a</span> : Inserir texto após a posição atual do cursor.</p>
+        <p><span>A</span> : Inserir texto no final da linha atual.</p>
+        <p><span>-b</span> : Permite editar arquivo binário.</p>
+        <p><span>dd</span> : Deletar linha atual.</p>
+        <p><span>[n]+dd</span> : Deletar n linhas a partir da linha atual.</p>
+        <p><span>G</span> : Ir para o fim do arquivo.</p>
+        <p><span>[n]+G</span> : Ir para a n-ésima linha do arquivo.</p>
+        <p><span>h</span> : Voltar um caractere.</p>
+        <p><span>H</span> : Ir para a primeira linha exibida na tela atual.</p>
+        <p><span>i</span> : Inserir texto a partir da posição atual do cursor.</p>
+        <p><span>I</span> : Inserir texto no início da linha atual.</p>
+        <p><span>j</span> : Descer uma linha.</p>
+        <p><span>J</span> : Juntar a linha atual com a linha seguinte.</p>
+        <p><span>[n]+J</span> : Juntar n linhas consecutivas a partir da linha atual.</p>
+        <p><span>k</span> : Subir uma linha.</p>
+        <p><span>l</span> : Avançar um caractere.</p>
+        <p><span>L</span> : Ir para a última linha exibida na tela atual.</p>
+        <p><span>n</span> : Procurar, a partir da posição atual do cursor, a próxima ocorrência do texto definido no último comando /.</p>
+        <p><span>N</span> : Procurar, a partir da posição atual do cursor e indo em direção ao início do arquivo, a próxima ocorrência do texto definido no último comando /.</p>
+        <p><span>o</span> : Inserir uma linha em branco após a linha atual.</p>
+        <p><span>O</span> : Inserir uma linha em branco acima da linha atual.</p>
+        <p><span>p</span> : Inserir linhas copiadas após a linha atual.</p>
+        <p><span>P</span> : Inserir linhas copiadas antes da linha atual.</p>
+        <p><span>r</span> : Substituir o caractere atual.</p>
+        <p><span>R</span> : Substituir um conjunto de caracteres.</p>
+        <p><span>s</span> : Deletar o caractere atual e inserir texto.</p>
+        <p><span>S</span> : Apagar linha e inserir novo texto na linha.</p>
+        <p><span>u</span> : Desfazer a última alteração feita no texto e ainda não desfeita.</p>
+        <p><span>U</span> : Desfazer a última alteração feita no texto.</p>
+        <p><span>x</span> : Apagar caractere onde o cursor está posicionado.</p>
+        <p><span>$</span> : Mover o cursor para o fim da linha em que o cursor está posicionado.</p>
+        <p><span>[n]+y</span> : Copiar n linhas a partir da linha atual.</p>
+        <p><span>yy</span> : Copiar a linha atual.</p>
+        <p><span>[n]+Y</span> : Copiar n linhas a partir da linha atual.</p>
+        <p><span>YY</span> : Copiar a linha atual.</p>
+        <p><span>CTRL+</span>B : Voltar uma página.</p>
+        <p><span>CTRL+F</span> : Avançar uma página.</p>
+        <p><span>F1</span> : Exibir tela de ajuda.</p>
+        <p><span>[n]+ENTER</span> : Ir para n linhas abaixo da linha atual.</p>
+        <p><span>[n]+.</span> : Repetir o último comando que alterou o texto n vezes a partir da posição atual do cursor.</p>
+        <p><span>[n]+~+ENTER</span> : Inverter a caixa (case) dos n caracteres seguintes ao cursor.</p>
+        <p><span>/texto</span> : Procurar pela primeira ocorrência do texto especificado a partir da posição atual do cursor.</p>
+
+        <h3>São alguns dos comandos do vim no modo de linha</h3>
+        <p><span>:r arquivo</span> : Incluir arquivo a partir da linha atual do cursor.</p>
+        <p><span>:q+ENTER</span> : Sair da tela de ajuda.</p>
+        <p><span>:q!</span> : Sair do vim sem salvar as alterações.</p>
+        <p><span>:w arquivo</span> : Salvar arquivo com o nome especificado.</p>
+        <p><span>:wq</span> : Sair do vim salvando as alterações.</p>
+        <p><span>:X</span> : Criptografa o arquivo.</p>
+        <p><span>:n</span> : Ir para a linha "n". Exemplo: Para ir para linha 10 do arquivo, :1</p>
+
+        <h3>Busca</h3>
+        <p><span>/palavra</span> : Procura por "palavra" do início para o fim.</p>
+        <p><span>?palavra</span> : Procura por "palavra" do fim para o início.</p>
+        <p><span>/Mari[oa]</span> : Procura por "Mario" ou "Maria".</p>
+        <p><span>/\< pal</span> : Procura por expressões que começem com "pala" como, "palavra" ou "palíndromo".</p>
+        <p><span>/ismo\></span> : Procura por expressões que terminem com "ismo" como, "autismo".</p>
+        <p><span>/\< para\></span> : Procura pela palavra "para".</p>
+        <p><span>/\<...\></span> : Procura por todas as palavras com 3 letras.</p>
+        <p><span>/maria\|joao</span> : Procura por maria ou joao.</p>
+        <p><span>/\<\d\d\d\d\></span> : Procura exatamente por 4 dígitos numéricos.</p>
+        <p><span>/^\n\{3}</span> : Procura por três linhas em branco.</p>
+        <p><span>:bufdo /palavra/</span> : Procura "palavra" em todos os arquivos abertos.</p>
+
+        <h3>Substituição</h3>
+        <p><span>:%s/antigo/novo/g</span> : Substitui todas as ocorrências de "antigo" por "novo" no arquivo.</p>
+        <p><span>:%s/antigo/novo/gw</span> : Substitui todas as ocorrências com confirmação.</p>
+        <p><span>:2,35s/antigo/novo/g</span> : Substitui todas as ocorrências entre as linhas 2 e 35.</p>
+        <p><span>:5,$s/antigo/novo/g</span> : Substitui todas as ocorrências da linha 5 até EOF (fim da linha).</p>
+        <p><span>:%s/^/legal/g</span> : Substitui o começo de cada linha com "legal".</p>
+        <p><span>:%s/$/Oh/g</span> : Substitui o fim de cada linha por "Oh".</p>
+        <p><span>:%s/antigo/novo/gi</span> : Substitui "antigo" por "novo" desconsiderando maíusculas e/ou minúsculas.</p>
+        <p><span>:%s/ *$//g</span> : Apaga todos os espaços em branco.</p>
+        <p><span>:g/palavra/d</span> : Apaga todas as linhas contendo "palavra".</p>
+        <p><span>:v/palavra/d</span> : Apaga todas as linhas que não contém "palavra".</p>
+        <p><span>:s/maria/joao/</span> : Substitui a primeira ocorrência de "maria" por "joao" na linha corrente.</p>
+        <p><span>:s/maria/joao/g</span> : Substitui todas as ocorrências de "maria" por "joao" na linha corrente.</p>
+        <p><span>:%s/maria/joao/g</span> : Substitui "maria" por "joao" em todo o arquivo.</p>
+        <p><span>:%s/\r//g</span> : Apaga retornos de carro do windows (\n).</p>
+        <p><span>:%s/\r/\r/g</span> : Transforma os retornos de carro do windows (\n) em retornos do Linux (\r).</p>
+        <p><span>:%s#<[^>]\+>##g</span> : Apaga tags HTML mas mantêm o texto.</p>
+        <p><span>:%s/^\(.*\)\n\1$/\1/</span> : Apaga linhas repetidas.</p>
+        <p><span>Ctrl+a</span> : Incrementa o número sob o cursor.</p>
+        <p><span>Ctrl+x</span> : Decrementa o número sob o cursor.</p>
+        <p><span>ggVGg?</span> : Muda o texto usando Rot13.</p>
+
+        <h3>Minúsculo / Maiúsculo</h3>
+        <p><span>Vu</span> : Torna todos os caracteres da linha minúsculos.</p>
+        <p><span>VU</span> : Torna todos os caracteres da linha maiúsculos.</p>
+        <p><span>g~~</span> : Inverte os caracteres do texto inteiro.</p>
+        <p><span>vEU</span> : Coloca as letras da palavra em maiúsculas.</p>
+        <p><span>vE~~</span> : Inverte os caracteres da palavra selecionada.</p>
+        <p><span>ggguG</span> : Coloca todo o texto em minúsculas.</p>
+        <p><span>:set ignorecase</span> : Ignora minúsculos/maiúsculos nas buscas.</p>
+        <p><span>:set smartcase</span> : Ignora minúsculos/maiúsculos em buscas exceto quando uma letra msiúscula é usada.</p>
+        <p><span>:%s/\<./\u&/g</span> : Coloca a primeira letra de cada palavra em maiúscula.</p>
+        <p><span>:%s/\<./\l&/g</span> : Coloca a primeira letra de cada palavra em minúscula.</p>
+        <p><span>:%s/.*/\u&</span> : Coloca a primeira letra de cada linha em maiúscula.</p>
+        <p><span>:%s/.*/\l&</span> : Coloca a primeira letra de cada linha em minúscula.</p>
+
+        <h3>Lendo/Gravando arquivos</h3>
+        <p><span>:1,10 w arquivo</span> : Salva as linhas de 1 a 10 em "arquivo".</p>
+        <p><span>:1,10 w >> arquivo</span> : Adiciona as linhas de 1 a 10 em "Arquivo".</p>
+        <p><span>:r arquivo</span> : Insere o conteúdo de "arquivo" no atual.</p>
+        <p><span>:23r arquivo</span> : Insere o conteúdo de "arquivo" a partir da linha 23.</p>
+
+        <h3>Explorando arquivos</h3>
+        <p><span>:e .</span> : Abre o gerenciador de arquivos integrado do Vim.</p>
+        <p><span>:Sex</span> : Divide a janela e abre o gerenciador de arquivos integrado.</p>
+        <p><span>:browse e</span> : Abre o gerenciador de arquivos integrado na janela corrente.</p>
+        <p><span>:ls</span> : Lista os buffers carregados.</p>
+        <p><span>:cd ..</span> : Move para a pasta superior.</p>
+        <p><span>:args</span> : Lista os arquivos.</p>
+        <p><span>:args *.php</span> : Abre lista de arquivos.</p>
+        <p><span>:grep expressao *.php</span> : retorna uma lista de arquivos .php que contenham a expressão informada.</p>
+        <p><span>gf</span> : Abre o arquivo sob o cursor.</p>
+
+        <h3>Interação com o Linux</h3>
+        <p><span>:!pwd</span> : Executa o comando "pwd" e retorna para o Vim.</p>
+        <p><span>!!pwd</span> : Executa o comando "pwd" e insere a saída no buffer.</p>
+        <p><span>:sh</span> : Retorna temporariamente para o shell.</p>
+        <p><span>exit</span> : Retorna para o Vim.</p>
+
+        <h3>Alinhamento</h3>
+        <p><span>:%!fmt</span> : Alinha todas as linhas.</p>
+        <p><span>!}fmt</span> : Alinha todas as linhas a partir da posição corrente.</p>
+        <p><span>5!!fmt</span> : Alinha as próximas 5 linhas.</p>
+
+        <h3>Abas</h3>
+        <p><span>:tabnew </span>: Cria uma nova aba.</p>
+        <p><span>gt </span>: Mostra a próxima aba.</p>
+        <p><span>:tabfirst </span>: Mostra a primeira aba.</p>
+        <p><span>:tablast </span>: Mostra a última aba.</p>
+        <p><span>:tabm n(posicao) </span>: Reorganiza as abas.</p>
+        <p><span>:tabdo %s/foo/bar/g </span>: Executa um comando em todas as abas.</p>
+        <p><span>:tab ball </span>: Coloca todos os arquivos abertos em abas.</p>
+
+        <h3>Divisão da janela do Vim</h3>
+        <p><span>:e arquivo</span> : Edita "arquivo" na janela corrente.</p>
+        <p><span>:split arquivo</span> : Divide a janela e abre "arquivo".</p>
+        <p><span>ctrl-w "seta para cima"</span> : Coloca o cursor na janela do topo.</p>
+        <p><span>ctrl-w ctrl-w</span> : Coloca o cursor na próxima janela.</p>
+        <p><span>ctrl-w_</span> : Maximiza a janela corrente.</p>
+        <p><span>ctrl-w=</span> : Coloca todas as janelas com o mesmo tamanho.</p>
+        <p><span>10 ctrl-w+</span> : Adiciona 10 linhas de tamanho na janela corrente.</p>
+        <p><span>:vsplit arquivo</span> : Divide a janela verticalmente.</p>
+        <p><span>:sview arquivo</span> : O mesmo que split, mas em modo somente-leitura.</p>
+        <p><span>:hide</span> : Fecha a janela corrente.</p>
+        <p><span>:only</span> : Fecha todas as janelas, exceto a janela atual.</p>
+        <p><span>:b 2</span> : Abre #2 na janela corrente.</p>
+
+        <h3>Auto-completion do texto</h3>
+        <p><span>Ctrl+n Ctrl+p (em modo de inserção)</span></span>  : Completa palavra.</p>
+        <p><span>Ctrl+x Ctrl+l</span></span>  : Completa linha.</p>
+        <p><span>:set dictionary=dict</span></span>  : Define dict como o dicionário atual.</p>
+        <p><span>Ctrl+x Ctrl+k</span></span>  : Completa usando o dicionário.</p>
+
+        <h3>Marcações</h3>
+        <p><span>mk</span> : Marca a posição corrente como k.</p>
+        <p><span>‘k:</span>  Move o cursor para a marca k.</p>
+        <p><span>d’k</span> : Apaga tudo até a marca k.</p>
+
+        <h3>Abreviações</h3>
+        <p><span>:ab email me@me.com</span> : Define email como abreviação de me@me.com.</p>
+
+        <h3>Identação de Texto</h3>
+        <p><span>:set autoindent</span> : Liga a identação automática.</p>
+        <p><span>:set smartindent</span> : Liga a identação inteligente.</p>
+        <p><span>:set shiftwidth=4</span> : Define o tamanho da identação em 4 espaços.</p>
+        <p><span>ctrl-t, ctrl-d</span> : Identa/Deidenta no modo de inserção.</p>
+        <p><span>>></span> : Identa.</p>
+        <p><span><<</span> : Deidenta.</p>
+
+        <h3>Marcação de sintaxe</h3>
+        <p><span>:syntax on</span> : Liga a marcação de sintaxe.</p>
+        <p><span>:syntax off</span> : Desliga a marcação de sintaxe.</p>
+        <p><span>:set syntax=perl</span> : Força a usar a marcação de sintaxe do perl.</p>
+      </section>
+    </main>
+
+    <footer>
+      <h2>Como contrubuir</h2>
+      <p>Essse site tem como intuito de trazer um material sobre terminal linux com boa qualidade. Eu sou estudante de TI como você, e eu sei que não é fácil. Hoje em dia os cursos são caros, os livros são inacessíveis para muitas pessoas. mas não podemos desistir. Faça bom proveito deste material. Você pode contribuir com este projeto no <a href="https://github.com/Rogerluiz0/linux-terminal-for-developers" target="_blank" rel="external" media="all" hreflang="pt-br">github</a>.</p>
+    </footer>
+
+    <a href="#Topo" id="Fim">Topo</a>
+  </div>
 
 </body>
 </html>
