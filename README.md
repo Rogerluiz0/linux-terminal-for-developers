@@ -19,29 +19,26 @@
 - [x] [Node.js](https://nodejs.org/en/)
 - [x] [Express.js](https://expressjs.com/)
 - [x] [Nodemon](https://nodemon.io/)
-- [x] [Dotenv](https://www.npmjs.com/package/dotenv)
-- [x] [Nunjucks](https://mozilla.github.io/nunjucks/)
+- [x] [dotenv](https://www.npmjs.com/package/dotenv)
+- [x] [nunjucks](https://mozilla.github.io/nunjucks/)
 
 ## Project
 
-Are you tired of reading texts? or do you want to read a text but are too lazy? how about a robot to read text to you?
+Ui clone of the facebook interface made with html, css and javascript for study purposes.
 
 ## Layout
 
-You can view the layout of this project by clicking [here](https://text-reader.herokuapp.com/)
+You can view the layout of this project by clicking [here](https://facebook-ui-clone.herokuapp.com/)
 
 ## Implementation ideas
 
 - [ ] Refactoring
-- [ ] Bug fixes
-- [ ] Add new features
-
-## Directory structure
+- [ ] Improve responsiveness
 
 ## Installation
 
-- `git clone https://github.com/roger3g/text-reader.git`;
-- `cd text-reader`;
+- `git clone https://github.com/roger3g/facebook-clone.git`;
+- `cd facebook-clone`;
 - `npm install`;
 - `npm run dev`.
 
