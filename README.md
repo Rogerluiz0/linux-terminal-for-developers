@@ -6,12 +6,12 @@
 
 <div align="center">
   <h2 align="center">Desktop</h2>
-  <img src=".github/desktop.svg" alt="Exemplo da interface no desktop" style="width: 100%;">
+  <img src=".github/print-desk.svg" alt="Exemplo da interface no desktop" style="width: 100%;">
 </div>
 
 <div align="center">
   <h2 align="center">Mobile</h2>
-  <img src=".github/mobile.svg" alt="Exemplo da interface no mobile" height="500px">
+  <img src=".github/print-mob.svg" alt="Exemplo da interface no mobile" height="500px">
 </div>
 
 ## Technology
