@@ -1,7 +1,7 @@
 {
-  "name": "linux-terminal-for-developers",
-  "version": "4.0.0",
-  "description": "Site para ajudar nos primeiros passos com Bash.",
+  "name": "text-reader",
+  "version": "1.0.0",
+  "description": "",
   "main": "src/server.js",
   "scripts": {
     "dev": "nodemon src/server.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Rogerluiz0/linux-terminal-for-developers.git"
+    "url": "git+https://github.com/roger3g/text-reader.git"
   },
   "keywords": [],
   "author": {
