@@ -14,7 +14,18 @@
   <img src=".github/print-mob.svg" alt="Exemplo da interface no mobile" height="500px">
 </div>
 
-## Technology
+## 📌 Table of Contents
+
+- [Technology](#-technology)
+- [Project](#-project)
+- [Layout](#-layout)
+- [Updates](#-updates)
+- [Implementation ideas](#-implementation-ideas)
+- [Installation](#-installation)
+- [How to contribute](#-how-to-contribute)
+- [License](#-license)
+
+## 🕹 Technology
 
 - [x] [Node.js](https://nodejs.org/en/)
 - [x] [Express.js](https://expressjs.com/)
@@ -22,20 +33,24 @@
 - [x] [dotenv](https://www.npmjs.com/package/dotenv)
 - [x] [nunjucks](https://mozilla.github.io/nunjucks/)
 
-## Project
+## 💻 Project
 
 Ui clone of the facebook interface made with html, css and javascript for study purposes.
 
-## Layout
+## 🔖 Layout
 
 You can view the layout of this project by clicking [here](https://facebook-ui-clone.herokuapp.com/)
 
-## Implementation ideas
+## ⬆ Updates
+
+This project is constantly evolving, I am always testing new features on it.
+
+## 💡 Implementation ideas
 
 - [ ] Refactoring
 - [ ] Improve responsiveness
 
-## Installation
+## ⬇ Installation
 
 - `git clone https://github.com/roger3g/facebook-clone.git`;
 - `cd facebook-clone`;
@@ -47,7 +62,7 @@ Requirements to run **locally**:
 - [ ] [Node.js](https://nodejs.org/en/) ( Required )
 - [ ] [GIT](https://git-scm.com/) ( Optional )
 
-## How to contribute
+## 🤔 How to contribute
 
 1. Fork this repository;
 2. Create a branch with your feature: **`git checkout -b my-feature`**;
@@ -56,6 +71,6 @@ Requirements to run **locally**:
 
 After the merge of your pull request is done, you can delete your branch.
 
-## License
+## 📕 License
 
 This project is under the MIT license. See the archive [LICENSE](LICENSE.md) for more details.
