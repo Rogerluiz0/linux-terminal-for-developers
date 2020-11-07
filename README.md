@@ -1,5 +1,3 @@
-# UI CLone Facebook
-
 <h1 align="center">
   <img alt="Ícone do projeto" title="" src=".github/icon-facebook.jpg" width="300" />
 </h1>
@@ -8,16 +6,8 @@
   <img src="https://img.shields.io/static/v1?label=author&message=roger3g&color=297be5&labelColor==242526" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=languages&message=3&color=297be5&labelColor==242526" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=297be5&labelColor==242526" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=version&message=1.0.0&color=297be5&labelColor==242526" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=platform&message=web&color=297be5&labelColor==242526" style="display: inline;">
 </p>
 
-## 📷 Screenshots
-
 <div align="center">
-  <h2 align="center">🖥 Desktop</h2>
   <img src=".github/print-desk.svg" alt="Exemplo da interface no desktop" style="width: 100%;">
-</div>
-
-<div align="center">
-  <h2 align="center">📱 Mobile</h2>
-  <img src=".github/print-mob.svg" alt="Exemplo da interface no mobile" height="500px">
 </div>
 
 ## 📌 Table of Contents
