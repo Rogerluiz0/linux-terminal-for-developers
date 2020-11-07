@@ -1,5 +1,9 @@
 # UI CLone Facebook
 
+<h1 align="center">
+  <img alt="Ícone do projeto" title="" src=".github/icon.jpg" width="" />
+</h1>
+
 <img src="https://img.shields.io/static/v1?label=author&message=roger3g&color=297be5&labelColor==242526" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=languages&message=3&color=297be5&labelColor==242526" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=297be5&labelColor==242526" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=version&message=1.0.0&color=297be5&labelColor==242526" style="display: inline;"> <img src="https://img.shields.io/static/v1?label=platform&message=web&color=297be5&labelColor==242526" style="display: inline;">
 
 ## 📷 Screenshots
