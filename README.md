@@ -29,6 +29,8 @@
 - [x] [dotenv](https://www.npmjs.com/package/dotenv)
 - [x] [nunjucks](https://mozilla.github.io/nunjucks/)
 
+**Note**: These technologies were used to deploy to heroku, they do **not reflect** in the direct development of the application.
+
 ## 💻 Project
 
 Ui clone of the facebook interface made with html, css and javascript for study purposes.
