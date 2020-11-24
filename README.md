@@ -21,15 +21,21 @@
 - [How to contribute](#-how-to-contribute)
 - [License](#-license)
 
-## 🕹 Technology
+## 🛠 Technology
 
-- [x] [Node.js](https://nodejs.org/en/)
-- [x] [Express.js](https://expressjs.com/)
-- [x] [Nodemon](https://nodemon.io/)
-- [x] [dotenv](https://www.npmjs.com/package/dotenv)
-- [x] [nunjucks](https://mozilla.github.io/nunjucks/)
+- **Front-End**
+  - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+  - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+  - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/Javascript)
 
-**Note**: These technologies were used to deploy to heroku, they do **not reflect** in the direct development of the application.
+- **Back-End**
+  - [Node.js](https://nodejs.org/en/)
+  - [Express.js](https://expressjs.com/)
+  - [Nodemon](https://nodemon.io/)
+  - [dotenv](https://www.npmjs.com/package/dotenv)
+  - [nunjucks](https://mozilla.github.io/nunjucks/)
+
+**Note**: Back-end technologies were used to deploy to heroku, they do **not reflect** on the direct development of the application.
 
 ## 💻 Project
 
@@ -50,10 +56,21 @@ This project is constantly evolving, I am always testing new features on it.
 
 ## ⬇ Installation
 
-- `git clone https://github.com/roger3g/facebook-clone.git`;
-- `cd facebook-clone`;
-- `npm install`;
-- `npm run dev`.
+```bash
+# Clone this repository
+$ git clone https://github.com/roger3g/facebook-clone.git
+
+# Access the project folder in the cmd/terminal
+$ cd facebook-clone
+
+# Install the dependencies
+$ npm install
+
+# Run the application in development mode
+$ npm run dev
+
+# The server will start at port: 80 - go to http://localhost:80
+```
 
 Requirements to run **locally**:
 
